@@ -1,4 +1,0 @@
-// 项目级 build.gradle（与仿美团、仿微信工程保持同一套版本）
-plugins {
-    id 'com.android.application' version '8.1.4' apply false
-}

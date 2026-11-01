@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 列表条目背景选择器：按下变灰，弹起为白色 -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/bg_gray" android:state_pressed="true" />
-    <item android:drawable="@color/white" />
-</selector>
