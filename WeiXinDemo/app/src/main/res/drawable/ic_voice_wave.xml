@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 语音气泡里的喇叭 + 声波 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,9 L7,9 L12,5 L12,19 L7,15 L3,15 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M15.5,12 C15.5,10.2 14.5,8.7 13,8 L13,16 C14.5,15.3 15.5,13.8 15.5,12 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M13,3.2 L13,5.3 C15.9,6.2 18,8.9 18,12 C18,15.1 15.9,17.8 13,18.7 L13,20.8 C17,19.8 20,16.2 20,12 C20,7.8 17,4.2 13,3.2 Z" />
+</vector>

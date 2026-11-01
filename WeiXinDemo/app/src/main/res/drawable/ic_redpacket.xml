@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 红包封面小图标：白色信封描边 + 圆形封印 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M6,2.5 L18,2.5 A2,2 0 0 1 20,4.5 L20,19.5 A2,2 0 0 1 18,21.5 L6,21.5 A2,2 0 0 1 4,19.5 L4,4.5 A2,2 0 0 1 6,2.5 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.8"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M4,5.2 C6.5,7.4 9.2,8.6 12,8.6 C14.8,8.6 17.5,7.4 20,5.2"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M12,9.6 A2.4,2.4 0 1 0 12,14.4 A2.4,2.4 0 1 0 12,9.6 Z"
+        android:fillColor="#FFFFFF" />
+</vector>

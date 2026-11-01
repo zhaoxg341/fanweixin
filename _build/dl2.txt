@@ -1,0 +1,2 @@
+﻿FAIL https://cdn.jsdelivr.net/gh/gradle/gradle@v8.2.0/gradle/wrapper/gradle-wrapper.jar  -> 远程服务器返回错误: (403) 已禁止。
+OK  https://gitee.com/mirrors/gradle/raw/v8.2.0/gradle/wrapper/gradle-wrapper.jar  size=63375

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 联网权限：若启用 Tomcat 服务器模式需要用到 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.Order">
+
+        <activity
+            android:name=".activity.ShopListActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.ShopDetailActivity" android:exported="false" />
+        <activity android:name=".activity.FoodDetailActivity" android:exported="false" />
+        <activity android:name=".activity.OrderActivity" android:exported="false" />
+        <activity android:name=".activity.PayActivity" android:exported="false" />
+        <activity android:name=".activity.PaySuccessActivity" android:exported="false" />
+
+        <!-- 新增功能页面 -->
+        <activity android:name=".activity.SearchActivity" android:exported="false" />
+        <activity android:name=".activity.ReviewListActivity" android:exported="false" />
+        <activity android:name=".activity.OrderListActivity" android:exported="false" />
+        <activity android:name=".activity.OrderDetailActivity" android:exported="false" />
+        <activity android:name=".activity.MineActivity" android:exported="false" />
+        <activity android:name=".activity.AddressListActivity" android:exported="false" />
+        <activity android:name=".activity.AddressEditActivity" android:exported="false" />
+        <activity android:name=".activity.CouponActivity" android:exported="false" />
+        <activity android:name=".activity.FavoriteActivity" android:exported="false" />
+    </application>
+
+</manifest>

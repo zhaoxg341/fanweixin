@@ -1,0 +1,31 @@
+=== meituan build outputs ===
+MeiTuan exists=True
+generated
+intermediates
+outputs
+tmp
+.gradle present in project
+=== search modules-2 ===
+=== search jdk folders ===
+EXISTS: C:\Program Files\Microsoft
+   OneDrive
+EXISTS: C:\Users\lenovo\.jdks
+   jbr-17.0.14
+   openjdk-25.0.1
+   .jbr-17.0.14.intellij
+   .openjdk-25.0.1.intellij
+=== D:\SDK content ===
+.downloadIntermediates
+.temp
+build-tools
+emulator
+fonts
+gradle-8.2
+licenses
+platform-tools
+platforms
+skins
+sources
+system-images
+.knownPackages
+=== D:\??\SDK content ===

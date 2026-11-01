@@ -1,0 +1,10 @@
+=== java -version ===
+openjdk version "25.0.3" 2026-04-21
+OpenJDK Runtime Environment (build 25.0.3+-15898627-b508.16)
+OpenJDK 64-Bit Server VM (build 25.0.3+-15898627-b508.16, mixed mode)
+=== AGP in cache ===
+NOT FOUND: C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\com.android.tools.build\gradle
+=== appcompat in cache ===
+NOT FOUND
+=== gradle dists ===
+gradle-8.2-bin

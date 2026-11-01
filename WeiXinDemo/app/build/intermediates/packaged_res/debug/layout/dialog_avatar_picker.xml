@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 选择好友头像的对话框内容：4 列网格，16 个候选头像 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingTop="8dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingBottom="6dp"
+        android:text="@string/avatar_picker_hint"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    <!-- 从手机相册选一张图，走系统文件选择器，不需要申请存储权限 -->
+    <TextView
+        android:id="@+id/tv_pick_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_item_selector"
+        android:gravity="center"
+        android:text="@string/avatar_from_gallery"
+        android:textColor="@color/weixin_green"
+        android:textSize="15sp" />
+
+    <GridView
+        android:id="@+id/gv_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:horizontalSpacing="4dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp" />
+</LinearLayout>

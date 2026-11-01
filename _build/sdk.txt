@@ -1,0 +1,16 @@
+﻿===== D:\Sdk\platforms =====
+android-34 | android-37.0
+===== D:\Sdk\build-tools =====
+33.0.1 | 36.0.0 | 37.0.0
+===== D:\Sdk\platform-tools =====
+adb.exe | AdbWinApi.dll | AdbWinUsbApi.dll | etc1tool.exe | fastboot.exe | hprof-conv.exe | libwinpthread-1.dll | make_f2fs.exe | make_f2fs_casefold.exe | mke2fs.conf | mke2fs.exe | NOTICE.txt | package.xml | source.properties | sqlite3.exe
+===== D:\Sdk\licenses =====
+android-sdk-license
+===== D:\Sdk\sources =====
+android-34 | android-37.0
+===== C:\Users\lenovo\AppData\Local\Android\Sdk =====
+.temp | emulator | licenses
+===== gradle user home dists =====
+exists=True
+gradle-8.2-bin
+===== gradle caches modules-2 groups =====

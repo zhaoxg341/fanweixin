@@ -1,0 +1,287 @@
+[
+  {
+    "id": "rice",
+    "name": "谷香·现炒小碗菜",
+    "category": "家常菜",
+    "rating": 4.9,
+    "monthlySales": 2386,
+    "eta": 25,
+    "distance": "650m",
+    "deliveryFee": 200,
+    "minimum": 2000,
+    "description": "一人食也要好好吃饭。每日鲜采，现点现炒。",
+    "tags": [
+      "现炒现做",
+      "人气好店"
+    ],
+    "image": "rice",
+    "dishes": [
+      {
+        "id": "r1",
+        "name": "招牌黄焖鸡米饭",
+        "price": 2290,
+        "description": "鸡腿肉慢焖入味，搭配软糯土豆与时蔬。",
+        "category": "热销",
+        "sales": 1256,
+        "image": "rice"
+      },
+      {
+        "id": "r2",
+        "name": "黑椒牛肉饭",
+        "price": 2890,
+        "description": "鲜嫩牛肉与黑椒汁，搭配清爽时蔬。",
+        "category": "主食",
+        "sales": 836,
+        "image": "beef"
+      },
+      {
+        "id": "r3",
+        "name": "番茄炒蛋饭",
+        "price": 1690,
+        "description": "酸甜番茄与滑嫩鸡蛋，家的味道。",
+        "category": "主食",
+        "sales": 689,
+        "image": "salad"
+      },
+      {
+        "id": "r4",
+        "name": "鲜榨橙汁",
+        "price": 890,
+        "description": "鲜橙现榨，清爽解腻。",
+        "category": "饮品",
+        "sales": 326,
+        "image": "drink"
+      }
+    ]
+  },
+  {
+    "id": "noodle",
+    "name": "巷口面馆·手作鲜面",
+    "category": "粉面",
+    "rating": 4.8,
+    "monthlySales": 1842,
+    "eta": 30,
+    "distance": "1.2km",
+    "deliveryFee": 300,
+    "minimum": 1800,
+    "description": "每天一碗好面，认真熬好每一锅汤。",
+    "tags": [
+      "手工面",
+      "汤鲜味美"
+    ],
+    "image": "noodle",
+    "dishes": [
+      {
+        "id": "n1",
+        "name": "招牌红烧牛肉面",
+        "price": 2690,
+        "description": "大块牛肉，慢炖浓汤，劲道手工面。",
+        "category": "热销",
+        "sales": 968,
+        "image": "noodle"
+      },
+      {
+        "id": "n2",
+        "name": "番茄鸡蛋面",
+        "price": 1890,
+        "description": "浓郁番茄汤底，搭配鸡蛋与青菜。",
+        "category": "主食",
+        "sales": 526,
+        "image": "rice"
+      },
+      {
+        "id": "n3",
+        "name": "香辣拌面",
+        "price": 2190,
+        "description": "秘制辣酱，葱香四溢，越拌越香。",
+        "category": "主食",
+        "sales": 432,
+        "image": "noodle"
+      }
+    ]
+  },
+  {
+    "id": "burger",
+    "name": "堡堡研究所",
+    "category": "汉堡",
+    "rating": 4.7,
+    "monthlySales": 3268,
+    "eta": 22,
+    "distance": "900m",
+    "deliveryFee": 250,
+    "minimum": 2000,
+    "description": "好汉堡的秘密，是食材和火候。",
+    "tags": [
+      "品质汉堡",
+      "出餐快"
+    ],
+    "image": "burger",
+    "dishes": [
+      {
+        "id": "b1",
+        "name": "双层芝士牛肉堡",
+        "price": 2990,
+        "description": "双层牛肉饼，融化芝士与酥软面包。",
+        "category": "热销",
+        "sales": 1520,
+        "image": "burger"
+      },
+      {
+        "id": "b2",
+        "name": "香脆鸡腿堡",
+        "price": 1990,
+        "description": "外酥里嫩的鸡腿肉，搭配爽脆生菜。",
+        "category": "主食",
+        "sales": 980,
+        "image": "burger"
+      },
+      {
+        "id": "b3",
+        "name": "黄金薯条",
+        "price": 990,
+        "description": "现炸薯条，外脆内软。",
+        "category": "小食",
+        "sales": 1280,
+        "image": "fries"
+      }
+    ]
+  },
+  {
+    "id": "salad",
+    "name": "绿野·轻食厨房",
+    "category": "轻食",
+    "rating": 4.9,
+    "monthlySales": 1268,
+    "eta": 35,
+    "distance": "1.8km",
+    "deliveryFee": 400,
+    "minimum": 2500,
+    "description": "把新鲜装进碗里，让每一餐轻盈又满足。",
+    "tags": [
+      "低脂轻食",
+      "新鲜直达"
+    ],
+    "image": "salad",
+    "dishes": [
+      {
+        "id": "s1",
+        "name": "香煎鸡胸能量碗",
+        "price": 3290,
+        "description": "香煎鸡胸肉、杂粮与多种鲜蔬。",
+        "category": "热销",
+        "sales": 856,
+        "image": "salad"
+      },
+      {
+        "id": "s2",
+        "name": "牛油果蔬菜沙拉",
+        "price": 2890,
+        "description": "绵密牛油果，搭配季节鲜蔬与油醋汁。",
+        "category": "主食",
+        "sales": 632,
+        "image": "salad"
+      },
+      {
+        "id": "s3",
+        "name": "柠檬气泡水",
+        "price": 1290,
+        "description": "清新柠檬与细腻气泡。",
+        "category": "饮品",
+        "sales": 265,
+        "image": "drink"
+      }
+    ]
+  },
+  {
+    "id": "pizza",
+    "name": "披萨日记·窑烤手作",
+    "category": "披萨",
+    "rating": 4.8,
+    "monthlySales": 968,
+    "eta": 38,
+    "distance": "2.0km",
+    "deliveryFee": 350,
+    "minimum": 2500,
+    "description": "手工饼底，香浓芝士，一口分享好心情。",
+    "tags": [
+      "手工现烤",
+      "芝士浓郁"
+    ],
+    "image": "pizza",
+    "dishes": [
+      {
+        "id": "p1",
+        "name": "经典意式披萨",
+        "price": 3990,
+        "description": "番茄酱、马苏里拉芝士与罗勒的经典搭配。",
+        "category": "热销",
+        "sales": 682,
+        "image": "pizza"
+      },
+      {
+        "id": "p2",
+        "name": "黑椒牛肉披萨",
+        "price": 4590,
+        "description": "黑椒牛肉与浓郁芝士，手工薄底。",
+        "category": "主食",
+        "sales": 428,
+        "image": "pizza"
+      },
+      {
+        "id": "p3",
+        "name": "芝士焗薯条",
+        "price": 1590,
+        "description": "薯条与芝士融合，香浓满足。",
+        "category": "小食",
+        "sales": 265,
+        "image": "fries"
+      }
+    ]
+  },
+  {
+    "id": "coffee",
+    "name": "早安·咖啡与早餐",
+    "category": "早餐",
+    "rating": 4.9,
+    "monthlySales": 2186,
+    "eta": 20,
+    "distance": "400m",
+    "deliveryFee": 200,
+    "minimum": 1500,
+    "description": "从一杯咖啡开始，认真对待每一个早晨。",
+    "tags": [
+      "早餐优选",
+      "精品咖啡"
+    ],
+    "image": "coffee",
+    "dishes": [
+      {
+        "id": "c1",
+        "name": "燕麦拿铁",
+        "price": 1890,
+        "description": "醇厚咖啡与燕麦奶的温柔搭配。",
+        "category": "热销",
+        "sales": 1365,
+        "image": "coffee"
+      },
+      {
+        "id": "c2",
+        "name": "美式咖啡",
+        "price": 1290,
+        "description": "现磨咖啡豆，清爽回甘。",
+        "category": "饮品",
+        "sales": 986,
+        "image": "coffee"
+      },
+      {
+        "id": "c3",
+        "name": "元气早餐三明治",
+        "price": 2190,
+        "description": "鸡蛋、蔬菜与全麦面包。",
+        "category": "主食",
+        "sales": 628,
+        "image": "burger"
+      }
+    ]
+  }
+]

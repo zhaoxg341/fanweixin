@@ -1,0 +1,3 @@
+magic b'PK\x03\x04'
+entries 56
+['org/gradle/wrapper/GradleWrapperMain.class', 'org/gradle/wrapper/WrapperExecutor.class']

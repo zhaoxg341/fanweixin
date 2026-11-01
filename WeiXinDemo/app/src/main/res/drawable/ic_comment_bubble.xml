@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 评论气泡 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#7F7F7F"
+        android:strokeWidth="1.7"
+        android:pathData="M21,5.2 c0,-0.66 -0.54,-1.2 -1.2,-1.2 H4.2 C3.54,4 3,4.54 3,5.2 v9.6 c0,0.66 0.54,1.2 1.2,1.2 H7 v3.8 l4.6,-3.8 h8.2 c0.66,0 1.2,-0.54 1.2,-1.2 z" />
+</vector>

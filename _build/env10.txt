@@ -1,0 +1,28 @@
+﻿=== D:\SDK\gradle-8.2\bin ===
+gradle
+gradle.bat
+=== version check ===
+
+Welcome to Gradle 8.2!
+
+Here are the highlights of this release:
+ - Kotlin DSL: new reference documentation, assignment syntax by default
+ - Kotlin DSL is now the default with Gradle init
+ - Improved suggestions to resolve errors in console output
+
+For more details see https://docs.gradle.org/8.2/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.2
+------------------------------------------------------------
+
+Build time:   2023-06-30 18:02:30 UTC
+Revision:     5f4a070a62a31a17438ac998c2b849f4f6892877
+
+Kotlin:       1.8.20
+Groovy:       3.0.17
+Ant:          Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+JVM:          17.0.14 (JetBrains s.r.o. 17.0.14+1-b1367.22)
+OS:           Windows 11 10.0 amd64
+

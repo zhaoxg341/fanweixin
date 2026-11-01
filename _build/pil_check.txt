@@ -1,0 +1,11 @@
+﻿python.exe : Traceback (most recent call last):
+所在位置 行:445 字符: 158
++ ... t\Scripts"; & "C:\Users\lenovo\.workbuddy\binaries\python\versions\3. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 1, in <module>
+    import PIL; print(PIL.__version__)
+    ^^^^^^^^^^
+ModuleNotFoundError: No module named 'PIL'

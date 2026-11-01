@@ -1,0 +1,11 @@
+﻿python.exe : 
+所在位置 行:445 字符: 159
++ ... | Out-Null; & "C:\Users\lenovo\.workbuddy\binaries\python\envs\defaul ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\lenovo\.workbuddy\binaries\python\envs\default\Scripts\python.exe -m pip install --up
+grade pip
+done

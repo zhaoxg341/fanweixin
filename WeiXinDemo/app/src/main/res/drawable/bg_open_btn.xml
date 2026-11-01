@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 拆红包的「開」按钮：金色圆 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#FFD789" />
+    <stroke
+        android:width="2dp"
+        android:color="#FFF3DA" />
+</shape>

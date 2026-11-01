@@ -1,0 +1,27 @@
+﻿=== Common install dirs ===
+C:\Program Files\Android\Android Studio = False
+C:\Program Files\Android = False
+D:\Android Studio = False
+D:\Program Files\Android\Android Studio = False
+D:\android-studio = False
+D:\Android\Android Studio = False
+D:\Android = False
+C:\Users\lenovo\AppData\Local\Android\Sdk = True
+D:\Android\Sdk = False
+D:\Android\sdk = False
+C:\Android = False
+D:\java21 = True
+D:\Sdk = True
+D:\Program Files\Android = False
+=== D root dirs ===
+altera | BaiduNetdisk | BaiduNetdiskDownload | Drivers | GameDownload | IEDA | IntelliJidea | java21 | LegionZone | LenovoSoftstore | LeStoreDownload | minGW | OS_CourseDesign_2026 | Program Files | Program Files (x86) | ProgramData | QLDownload | QLDownloadGame | QQMusicCache | qycache | SDK | SteamLibrary | web学习 | web实验 | WeGameApps | workbuudy | WPS Software | 哔哩哔哩 | 安卓 | 实验文件夹 | 实验软件 | 应用程序 | 微信开发者 | 新建文件夹 | 无畏契约 | 腾讯会议 | 通信课设 | 项目开发学习
+=== C:\Program Files dirs ===
+AntiCheatExpert | Common Files | dotnet | Huorong | Intel | Internet Explorer | Microsoft | Microsoft GameInput | Microsoft Office | Microsoft Office 15 | Microsoft OfficePLUS | Microsoft OneDrive | Microsoft Update Health Tools | Microsoft Visual Studio | ModifiableWindowsApps | MSBuild | MySQL | NVIDIA Corporation | Reference Assemblies | Rockstar Games | Tencent | Windows Defender | Windows Mail | Windows Media Player | Windows NT | Windows Photo Viewer | WindowsPowerShell | WSL
+=== C root dirs ===
+AndrowsData | c | inetpub | PDFConverter | PerfLogs | Program Files | Program Files (x86) | tmp | Users | Windows | XboxGames | 新建文件夹
+=== env ===
+JAVA_HOME=
+ANDROID_HOME=
+ANDROID_SDK_ROOT=
+JAVA=D:\java21\bin\java.exe
+GRADLE=

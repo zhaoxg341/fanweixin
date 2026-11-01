@@ -1,0 +1,7 @@
+﻿=== javac ===
+javac exit=0
+=== out ===
+ChatServer$ClientHandler.class
+ChatServer.class
+TestClient$Device.class
+TestClient.class

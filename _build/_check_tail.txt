@@ -1,0 +1,13 @@
+﻿璧勬簮缁熻: layout=42 drawable=109 color=15 string=251 style=6 dimen=8 mipmap=2
+Java 鏂囦欢鏁?49锛孹ML 鏂囦欢鏁?125
+甯冨眬瀹氫箟鐨?id 鏁伴噺=167锛孞ava 浣跨敤鐨?id 鏁伴噺=158
+------------------------------------------------------------
+鍙戠幇 8 涓棶棰?
+  [X] ChatActivity.java: R.style.Theme_Black_NoTitleBar_Fullscreen 鏈壘鍒?
+  [X] ChatActivity.java: R.color.transparent 鏈壘鍒?
+  [X] ChatActivity.java: R.style.Theme_Black_NoTitleBar_Fullscreen 鏈壘鍒?
+  [X] ChatActivity.java: R.color.transparent 鏈壘鍒?
+  [X] MomentAdapter.java: R.drawable.list_selector_background 鏈壘鍒?
+  [X] activity_game.xml: @color/game_chip_text 鏈壘鍒?
+  [X] activity_game.xml: @color/game_chip_text 鏈壘鍒?
+  [X] activity_game.xml: @color/game_chip_text 鏈壘鍒?

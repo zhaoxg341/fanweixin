@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 游戏页顶部的绿色渐变卡片 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="0"
+        android:endColor="#0BA35A"
+        android:startColor="#12C46C" />
+    <corners android:radius="12dp" />
+</shape>

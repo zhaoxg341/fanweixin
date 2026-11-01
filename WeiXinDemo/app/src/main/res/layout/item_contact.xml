@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 联系人条目 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_height"
+    android:background="@drawable/bg_item_selector"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="14dp">
+
+    <cn.itcast.weixin.view.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="38dp"
+        android:layout_height="38dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/ItemTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1" />
+</LinearLayout>

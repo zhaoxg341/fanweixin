@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账卡片：微信的橙色（比红包稍浅），圆角 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FA9D3B" />
+    <corners android:radius="8dp" />
+</shape>

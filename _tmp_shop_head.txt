@@ -1,0 +1,109 @@
+﻿{
+  "banners": [
+    "banner1",
+    "banner2",
+    "banner3"
+  ],
+  "shops": [
+    {
+      "id": 1,
+      "shopName": "肯德基宅急送",
+      "score": 4.8,
+      "saleNum": 1200,
+      "offerPrice": 20,
+      "distributionCost": 5,
+      "feature": "满30减10",
+      "time": "30分钟",
+      "category": "快餐",
+      "banner": "shop1",
+      "foodList": [
+        {
+          "foodId": 101,
+          "foodName": "香辣鸡腿堡",
+          "popularity": "人气爆款",
+          "saleNum": 97,
+          "price": 18.5,
+          "foodPic": "food1"
+        },
+        {
+          "foodId": 102,
+          "foodName": "新奥尔良烤翅",
+          "popularity": "店长推荐",
+          "saleNum": 134,
+          "price": 12.0,
+          "foodPic": "food2"
+        },
+        {
+          "foodId": 103,
+          "foodName": "劲爆鸡米花",
+          "popularity": "热销",
+          "saleNum": 171,
+          "price": 11.0,
+          "foodPic": "food3"
+        },
+        {
+          "foodId": 104,
+          "foodName": "黄金薯条(大)",
+          "popularity": "经典小食",
+          "saleNum": 208,
+          "price": 9.0,
+          "foodPic": "food4"
+        },
+        {
+          "foodId": 105,
+          "foodName": "冰镇可乐(中)",
+          "popularity": "解腻首选",
+          "saleNum": 245,
+          "price": 7.0,
+          "foodPic": "food5"
+        },
+        {
+          "foodId": 106,
+          "foodName": "芝士鸡肉卷",
+          "popularity": "新品上市",
+          "saleNum": 282,
+          "price": 14.5,
+          "foodPic": "food6"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "shopName": "张亮麻辣烫",
+      "score": 4.7,
+      "saleNum": 3200,
+      "offerPrice": 15,
+      "distributionCost": 3,
+      "feature": "满25减8",
+      "time": "25分钟",
+      "category": "麻辣烫",
+      "banner": "shop2",
+      "foodList": [
+        {
+          "foodId": 201,
+          "foodName": "招牌麻辣烫",
+          "popularity": "镇店招牌",
+          "saleNum": 319,
+          "price": 22.0,
+          "foodPic": "food7"
+        },
+        {
+          "foodId": 202,
+          "foodName": "番茄麻辣烫",
+          "popularity": "酸甜可口",
+          "saleNum": 356,
+          "price": 24.0,
+          "foodPic": "food8"
+        },
+        {
+          "foodId": 203,
+          "foodName": "麻辣香锅",
+          "popularity": "人气爆款",
+          "saleNum": 393,
+          "price": 38.0,
+          "foodPic": "food9"
+        },
+        {
+          "foodId": 204,
+          "foodName": "手打牛肉丸",
+        

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 表情面板（底部弹出）：标题 + 表情网格 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_panel_top"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="14dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/emoji_panel_title"
+        android:textColor="@color/text_hint"
+        android:textSize="12sp" />
+
+    <GridView
+        android:id="@+id/grid_emoji"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="8"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp" />
+</LinearLayout>

@@ -1,0 +1,4 @@
+<network-security-config>
+    <!-- This coursework demo accepts HTTP for a local development server. -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

@@ -1,0 +1,187 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="cn.itcast.weixin"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- 联网权限：若启用服务器模式需要用到 -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:5:5-67
+12-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:5:22-64
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] D:\SDK\gradle-8.2\caches\transforms-3\47e328fbb9a6da19e7cdd96cc41cfa33\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+15        android:name="cn.itcast.weixin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] D:\SDK\gradle-8.2\caches\transforms-3\47e328fbb9a6da19e7cdd96cc41cfa33\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] D:\SDK\gradle-8.2\caches\transforms-3\47e328fbb9a6da19e7cdd96cc41cfa33\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="cn.itcast.weixin.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] D:\SDK\gradle-8.2\caches\transforms-3\47e328fbb9a6da19e7cdd96cc41cfa33\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] D:\SDK\gradle-8.2\caches\transforms-3\47e328fbb9a6da19e7cdd96cc41cfa33\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:7:5-83:19
+21        android:name="cn.itcast.weixin.WeixinApp"
+21-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:8:9-34
+22        android:allowBackup="true"
+22-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:9:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.9.0] D:\SDK\gradle-8.2\caches\transforms-3\47e328fbb9a6da19e7cdd96cc41cfa33\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+24        android:debuggable="true"
+25        android:extractNativeLibs="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:10:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:11:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:12:9-54
+29        android:supportsRtl="true"
+29-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:13:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.WeiXin"
+31-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:15:9-44
+32        android:usesCleartextTraffic="true" >
+32-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:14:9-44
+33
+34        <!-- 登录页：填昵称与服务器地址，用户已登录时会直接跳到主界面 -->
+35        <activity
+35-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:18:9-26:20
+36            android:name="cn.itcast.weixin.activity.LoginActivity"
+36-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:19:13-51
+37            android:exported="true"
+37-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:20:13-36
+38            android:windowSoftInputMode="adjustResize" >
+38-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:21:13-55
+39            <intent-filter>
+39-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:22:13-25:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:23:17-69
+40-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:23:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:24:17-77
+42-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:24:27-74
+43            </intent-filter>
+44        </activity>
+45
+46        <!-- 主界面：底部四个 Tab（微信 / 通讯录 / 发现 / 我） -->
+47        <activity
+47-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:29:9-32:58
+48            android:name="cn.itcast.weixin.activity.MainActivity"
+48-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:30:13-50
+49            android:exported="false"
+49-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:31:13-37
+50            android:windowSoftInputMode="adjustResize" />
+50-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:32:13-55
+51
+52        <!-- 聊天界面 -->
+53        <activity
+53-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:35:9-38:58
+54            android:name="cn.itcast.weixin.activity.ChatActivity"
+54-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:36:13-50
+55            android:exported="false"
+55-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:37:13-37
+56            android:windowSoftInputMode="adjustResize" />
+56-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:38:13-55
+57
+58        <!-- 朋友圈 -->
+59        <activity
+59-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:41:9-43:40
+60            android:name="cn.itcast.weixin.activity.MomentsActivity"
+60-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:42:13-53
+61            android:exported="false" />
+61-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:43:13-37
+62
+63        <!-- 发动态：文字 + 相册图片 -->
+64        <activity
+64-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:46:9-49:58
+65            android:name="cn.itcast.weixin.activity.PublishMomentActivity"
+65-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:47:13-59
+66            android:exported="false"
+66-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:48:13-37
+67            android:windowSoftInputMode="adjustResize" />
+67-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:49:13-55
+68
+69        <!-- 小游戏：从聊天页「+」或发现页游戏大厅进入 -->
+70        <activity
+70-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:52:9-55:58
+71            android:name="cn.itcast.weixin.activity.GameActivity"
+71-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:53:13-50
+72            android:exported="false"
+72-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:54:13-37
+73            android:windowSoftInputMode="adjustResize" />
+73-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:55:13-55
+74
+75        <!-- 游戏大厅：三个玩法 + 选择对手 -->
+76        <activity
+76-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:58:9-60:40
+77            android:name="cn.itcast.weixin.activity.GameLobbyActivity"
+77-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:59:13-55
+78            android:exported="false" />
+78-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:60:13-37
+79
+80        <!-- 全屏看大图：朋友圈九宫格、聊天气泡里的图片都跳这里 -->
+81        <activity
+81-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:63:9-66:51
+82            android:name="cn.itcast.weixin.activity.PhotoViewerActivity"
+82-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:64:13-57
+83            android:exported="false"
+83-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:65:13-37
+84            android:theme="@style/Theme.WeiXin" />
+84-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:66:13-48
+85
+86        <!-- 联系人资料页 -->
+87        <activity
+87-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:69:9-71:40
+88            android:name="cn.itcast.weixin.activity.UserInfoActivity"
+88-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:70:13-54
+89            android:exported="false" />
+89-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:71:13-37
+90
+91        <!-- 收藏页（我-收藏） -->
+92        <activity
+92-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:74:9-76:40
+93            android:name="cn.itcast.weixin.activity.FavoriteActivity"
+93-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:75:13-54
+94            android:exported="false" />
+94-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:76:13-37
+95
+96        <!-- 设置页（我-设置） -->
+97        <activity
+97-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:79:9-82:58
+98            android:name="cn.itcast.weixin.activity.SettingsActivity"
+98-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:80:13-54
+99            android:exported="false"
+99-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:81:13-37
+100            android:windowSoftInputMode="adjustResize" />
+100-->C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\AndroidManifest.xml:82:13-55
+101
+102        <provider
+102-->[androidx.emoji2:emoji2:1.2.0] D:\SDK\gradle-8.2\caches\transforms-3\98441c11c46f6419e4f55d0f1c9541f5\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+103            android:name="androidx.startup.InitializationProvider"
+103-->[androidx.emoji2:emoji2:1.2.0] D:\SDK\gradle-8.2\caches\transforms-3\98441c11c46f6419e4f55d0f1c9541f5\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+104            android:authorities="cn.itcast.weixin.androidx-startup"
+104-->[androidx.emoji2:emoji2:1.2.0] D:\SDK\gradle-8.2\caches\transforms-3\98441c11c46f6419e4f55d0f1c9541f5\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+105            android:exported="false" >
+105-->[androidx.emoji2:emoji2:1.2.0] D:\SDK\gradle-8.2\caches\transforms-3\98441c11c46f6419e4f55d0f1c9541f5\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+106            <meta-data
+106-->[androidx.emoji2:emoji2:1.2.0] D:\SDK\gradle-8.2\caches\transforms-3\98441c11c46f6419e4f55d0f1c9541f5\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+107                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+107-->[androidx.emoji2:emoji2:1.2.0] D:\SDK\gradle-8.2\caches\transforms-3\98441c11c46f6419e4f55d0f1c9541f5\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+108                android:value="androidx.startup" />
+108-->[androidx.emoji2:emoji2:1.2.0] D:\SDK\gradle-8.2\caches\transforms-3\98441c11c46f6419e4f55d0f1c9541f5\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+109            <meta-data
+109-->[androidx.lifecycle:lifecycle-process:2.4.1] D:\SDK\gradle-8.2\caches\transforms-3\3285ad8cd6936baf05f330eb2a872533\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+110                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+110-->[androidx.lifecycle:lifecycle-process:2.4.1] D:\SDK\gradle-8.2\caches\transforms-3\3285ad8cd6936baf05f330eb2a872533\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+111                android:value="androidx.startup" />
+111-->[androidx.lifecycle:lifecycle-process:2.4.1] D:\SDK\gradle-8.2\caches\transforms-3\3285ad8cd6936baf05f330eb2a872533\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+112        </provider>
+113    </application>
+114
+115</manifest>

@@ -1,0 +1,28 @@
+GRADLE_USER_HOME=
+JAVA_HOME=
+=== ~/.gradle ===
+daemon
+wrapper
+=== ~/.gradle/jdks ===
+none
+=== java.exe under Program Files ===
+=== D:\?? top ===
+bin
+jbr
+lib
+license
+modules
+plugins
+SDK
+build.txt
+LICENSE.txt
+NOTICE.txt
+product-info.json
+uninstall.exe
+=== jdk dirs under D:\?? ===
+D:\??\jbr\bin\java.exe
+=== managed binaries ===
+.cache
+node
+PortableGit
+python

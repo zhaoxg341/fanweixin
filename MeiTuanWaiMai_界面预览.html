@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>仿美团外卖 · 界面预览（升级版）</title>
+<style>
+  :root{
+    --orange:#FF7D00;
+    --orange-light:#FFF8E1;
+    --orange-bg:#FFF3E6;
+    --text:#333;
+    --gray:#7E7E7E;
+    --light:#B5B5B5;
+    --bg:#F5F5F5;
+    --line:#EEE;
+    --red:#FF5A5A;
+    --green:#2BA471;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    background:#F0F1F3;color:var(--text);padding:32px 24px 56px;
+  }
+  .head{max-width:1440px;margin:0 auto 26px;text-align:center;}
+  .head h1{font-size:24px;letter-spacing:.5px;}
+  .head h1 span{color:var(--orange);}
+  .head p{margin-top:10px;color:var(--gray);font-size:13.5px;line-height:1.7;}
+  .note{
+    max-width:1440px;margin:0 auto 28px;background:#fff;border-left:4px solid var(--orange);
+    border-radius:8px;padding:14px 18px;font-size:12.5px;color:#555;line-height:1.9;
+  }
+  .note b{color:var(--orange);}
+  .rack{display:flex;gap:24px;align-items:flex-start;overflow-x:auto;padding:6px 4px 20px;max-width:1440px;margin:0 auto;}
+  .col{flex:0 0 auto;width:300px;}
+  .col>.label{
+    text-align:center;font-size:12.5px;font-weight:600;margin-bottom:10px;padding:5px 10px;
+    background:#fff;border-radius:20px;box-shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  .col>.label em{font-style:normal;color:var(--orange);}
+  .phone{
+    width:300px;height:620px;background:#fff;border-radius:26px;overflow:hidden;
+    border:8px solid #222;box-shadow:0 14px 30px rgba(0,0,0,.18);display:flex;flex-direction:column;
+  }
+  .screen{flex:1;background:var(--bg);overflow:hidden;display:flex;flex-direction:column;}
+  .scroll{flex:1;overflow-y:auto;overflow-x:hidden;}
+  .scroll::-webkit-scrollbar{width:0;}
+
+  .titlebar{height:46px;flex:0 0 46px;background:var(--orange);color:#fff;display:flex;align-items:center;padding:0 8px;font-size:14px;font-weight:600;}
+  .titlebar .back{width:24px;font-size:18px;color:#fff;}
+  .titlebar .ttl{flex:1;text-align:center;}
+  .titlebar .rt{min-width:44px;text-align:right;font-size:11px;font-weight:400;}
+
+  .feature{display:inline-block;font-size:9px;color:var(--orange);border:1px solid #FFD9A8;background:var(--orange-light);border-radius:3px;padding:1px 4px;line-height:1.4;}
+  .money{color:var(--orange);font-weight:700;}
+
+  /* 首页 */
+  .home-top{background:var(--orange);padding:8px 12px 12px;color:#fff;}
+  .loc{display:flex;align-items:center;font-size:12px;font-weight:600;}
+  .loc .pin{font-size:11px;margin-right:3px;}
+  .loc .city{margin-left:auto;font-weight:400;font-size:11px;}
+  .searchbar{height:32px;background:#fff;border-radius:16px;margin-top:8px;display:flex;align-items:center;padding:0 6px 0 10px;}
+  .searchbar .mag{width:13px;height:13px;border:1.6px solid #999;border-radius:50%;position:relative;flex:0 0 13px;}
+  .searchbar .mag:after{content:"";position:absolute;width:5px;height:1.6px;background:#999;transform:rotate(45deg);right:-4px;bottom:-2px;}
+  .searchbar .hint{font-size:11px;color:var(--light);margin-left:6px;flex:1;}
+  .searchbar .sbtn{background:var(--orange);color:#fff;font-size:11px;border-radius:12px;padding:4px 11px;}
+  .banner{height:120px;position:relative;}
+  .banner img{width:100%;height:100%;object-fit:cover;display:block;}
+  .dots{position:absolute;bottom:6px;left:0;right:0;display:flex;justify-content:center;gap:5px;}
+  .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.55);}
+  .dot.on{background:#fff;width:10px;border-radius:3px;}
+  .cats{background:#fff;margin-top:6px;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 4px 6px;}
+  .cat{display:flex;flex-direction:column;align-items:center;padding:4px 0 7px;}
+  .cat .ico{width:38px;height:38px;border-radius:50%;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;}
+  .cat .nm{font-size:10px;margin-top:4px;color:var(--text);}
+  .c1{background:#FFB300}.c2{background:#FF7043}.c3{background:#66BB6A}.c4{background:#42A5F5}
+  .c5{background:#AB47BC}.c6{background:#EC407A}.c7{background:#26A69A}.c8{background:#7E57C2}
+  .sortrow{height:34px;background:#fff;margin-top:6px;display:flex;align-items:center;}
+  .sortrow span{flex:1;text-align:center;font-size:11px;color:#333;}
+  .sortrow span.on{color:var(--orange);font-weight:600;}
+  .filters{background:#fff;display:flex;gap:6px;padding:0 10px 7px;}
+  .chip{font-size:10px;color:var(--gray);background:#F5F5F5;border-radius:11px;padding:4px 10px;}
+  .chip.on{color:var(--orange);background:var(--orange-bg);border:1px solid var(--orange);}
+  .sec-title{background:#fff;font-size:12px;font-weight:600;padding:8px 12px 4px;margin-top:6px;}
+
+  .shop-item{display:flex;padding:8px 10px;border-bottom:1px solid var(--bg);background:#fff;}
+  .shop-item img{width:56px;height:56px;border-radius:5px;object-fit:cover;flex:0 0 56px;}
+  .shop-info{flex:1;margin-left:9px;min-width:0;}
+  .shop-name{font-size:13px;font-weight:700;}
+  .shop-meta{font-size:10px;color:var(--gray);margin-top:3px;display:flex;gap:8px;align-items:center;}
+  .shop-meta .star{color:var(--orange);}
+  .shop-row3{display:flex;align-items:center;gap:7px;margin-top:4px;font-size:10px;color:var(--gray);}
+  .shop-row3 .right{margin-left:auto;}
+
+  .bottomnav{height:46px;background:#fff;border-top:1px solid var(--line);display:flex;flex:0 0 46px;}
+  .navitem{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--light);font-size:9px;gap:2px;}
+  .navitem.on{color:var(--orange);}
+  .navitem .ni{font-size:14px;line-height:1;}
+
+  /* 搜索 */
+  .search-head{height:46px;background:var(--orange);display:flex;align-items:center;padding:0 8px;gap:7px;}
+  .search-head .bk{color:#fff;font-size:16px;width:18px;}
+  .search-head .box{flex:1;height:30px;background:#fff;border-radius:15px;display:flex;align-items:center;padding:0 9px;}
+  .search-head .box .mag{width:11px;height:11px;border:1.5px solid #999;border-radius:50%;position:relative;}
+  .search-head .box .ph{font-size:10.5px;color:var(--light);margin-left:5px;}
+  .search-head .go{color:#fff;font-size:12px;}
+  .tagblock{padding:12px;background:#fff;height:100%;}
+  .tagtitle{display:flex;align-items:center;font-size:12px;font-weight:600;margin-top:4px;}
+  .tagtitle .clr{margin-left:auto;font-size:10.5px;color:var(--gray);font-weight:400;}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px;}
+  .tag{font-size:10.5px;color:var(--gray);background:#F5F5F5;border-radius:11px;padding:4px 10px;}
+  .tag.hot{color:var(--orange);background:var(--orange-light);border:1px solid #FFD9A8;}
+  .resultbar{background:var(--bg);color:var(--gray);font-size:10.5px;padding:7px 12px;}
+
+  /* 店铺详情 */
+  .dhead{background:#fff;padding:10px 12px;}
+  .dtop{display:flex;}
+  .dtop img{width:52px;height:52px;border-radius:5px;object-fit:cover;}
+  .dtop .txt{margin-left:9px;flex:1;}
+  .dname{font-size:15px;font-weight:700;}
+  .dmeta{font-size:10px;color:var(--gray);margin-top:4px;}
+  .dmeta .star{color:var(--orange);}
+  .review-entry{display:flex;align-items:center;margin-top:9px;padding-top:9px;border-top:1px solid var(--line);font-size:11px;}
+  .review-entry .st{color:var(--orange);margin-right:4px;}
+  .review-entry .more{margin-left:auto;color:var(--light);font-size:10px;}
+  .menu-title{background:#fff;margin-top:6px;padding:8px 12px 4px;font-size:12px;font-weight:600;}
+  .menu{background:#fff;}
+  .mitem{display:flex;padding:8px 10px;border-bottom:1px solid var(--bg);}
+  .mitem img{width:72px;height:72px;border-radius:5px;object-fit:cover;}
+  .mitem .mi{flex:1;margin-left:8px;display:flex;flex-direction:column;}
+  .mname{font-size:12.5px;font-weight:600;}
+  .mpop{font-size:9px;color:var(--orange);background:var(--orange-light);border:1px solid #FFD9A8;border-radius:2px;padding:1px 3px;align-self:flex-start;margin-top:3px;}
+  .msale{font-size:9.5px;color:var(--light);margin-top:3px;}
+  .mprice{margin-top:auto;display:flex;align-items:center;}
+  .mprice .p{font-size:12.5px;color:var(--orange);font-weight:700;flex:1;}
+  .cbtn{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;line-height:1;}
+  .cbtn.plus{background:var(--orange);color:#fff;}
+  .cbtn.minus{border:1px solid var(--orange);color:var(--orange);background:#fff;}
+  .cnt{font-size:10px;margin:0 6px;}
+  .cartbar{height:50px;background:#fff;display:flex;align-items:center;padding:0 10px;flex:0 0 50px;box-shadow:0 -2px 8px rgba(0,0,0,.05);}
+  .carticon{width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;position:relative;}
+  .badge{position:absolute;top:-3px;right:-3px;background:#FF3B30;color:#fff;font-size:8px;min-width:15px;height:15px;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:0 3px;}
+  .cartinfo{flex:1;margin-left:9px;}
+  .cartprice{font-size:16px;color:var(--orange);font-weight:700;}
+  .carttip{font-size:9.5px;color:var(--gray);margin-top:1px;}
+  .settle{width:88px;height:36px;border-radius:18px;background:var(--orange);color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center;justify-content:center;}
+
+  /* 结算 */
+  .addr{background:#fff;display:flex;padding:12px;align-items:center;}
+  .addr .pin{color:var(--orange);font-size:15px;margin-right:7px;}
+  .addr .a-txt{flex:1;}
+  .addr .a1{font-size:13px;font-weight:600;line-height:1.5;}
+  .addr .a2{font-size:10.5px;color:var(--gray);margin-top:3px;}
+  .addr .arrow{color:#CCC;}
+  .rowcard{background:#fff;margin-top:6px;padding:12px;display:flex;align-items:center;font-size:12px;}
+  .rowcard .rt{margin-left:auto;color:var(--gray);font-size:11px;display:flex;align-items:center;gap:3px;}
+  .rowcard .rt.red{color:var(--red);}
+  .rowcard .ic{width:15px;margin-right:7px;text-align:center;color:var(--orange);}
+  .remark-card{background:#fff;margin-top:6px;padding:12px;}
+  .remark-card .top{display:flex;align-items:center;font-size:12px;}
+  .remark-card .inp{flex:1;margin-left:10px;height:28px;background:#F5F5F5;border-radius:5px;font-size:10.5px;color:var(--light);display:flex;align-items:center;padding:0 8px;}
+  .remark-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .amount{background:#fff;margin-top:6px;padding:12px;font-size:11.5px;color:var(--gray);}
+  .amount .line{display:flex;margin-bottom:7px;}
+  .amount .line span:last-child{margin-left:auto;color:var(--text);}
+  .amount .line.discount span:last-child{color:var(--red);}
+  .amount .total{border-top:1px solid var(--line);padding-top:9px;margin-top:2px;display:flex;align-items:center;font-size:12.5px;color:var(--text);font-weight:600;}
+  .amount .total .v{margin-left:auto;color:var(--orange);font-size:16px;}
+  .paybar{height:52px;background:#fff;display:flex;align-items:center;padding:0 12px;flex:0 0 52px;border-top:1px solid var(--line);}
+  .paybar .pt{flex:1;}
+  .paybar .pt .p1{font-size:15px;color:var(--orange);font-weight:700;}
+  .paybar .pt .p2{font-size:9.5px;color:var(--gray);}
+  .paybar .btn{width:98px;height:36px;border-radius:18px;background:var(--orange);color:#fff;font-size:12.5px;font-weight:600;display:flex;align-items:center;justify-content:center;}
+
+  /* 订单中心 */
+  .otabs{height:40px;background:#fff;display:flex;}
+  .otab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11.5px;color:#333;}
+  .otab.on{color:var(--orange);font-weight:600;}
+  .otab .ind{width:18px;height:2px;background:var(--orange);border-radius:1px;margin-top:3px;}
+  .otab .ind.hide{background:transparent;}
+  .ocard{background:#fff;margin:8px 10px;border-radius:8px;padding:10px;}
+  .ocard .top{display:flex;align-items:center;}
+  .ocard .top img{width:30px;height:30px;border-radius:4px;object-fit:cover;}
+  .ocard .sn{font-size:12px;font-weight:600;margin-left:7px;flex:1;}
+  .ostatus{font-size:10.5px;color:var(--orange);}
+  .ostatus.blue{color:#3B7CFF;}
+  .ostatus.gray{color:var(--gray);}
+  .ocard .mid{display:flex;align-items:center;margin-top:8px;font-size:10.5px;color:var(--gray);}
+  .ocard .mid .amt{margin-left:auto;color:var(--text);font-size:13px;font-weight:700;}
+  .ocard .bot{display:flex;align-items:center;margin-top:8px;}
+  .ocard .tm{font-size:9.5px;color:var(--light);flex:1;}
+  .obtn{font-size:10px;border-radius:14px;padding:5px 11px;margin-left:6px;}
+  .obtn.gray{border:1px solid #DDD;color:var(--gray);}
+  .obtn.org{background:var(--orange);color:#fff;}
+
+  /* 我的 */
+  .mine-head{background:linear-gradient(160deg,#FF9A2E,#FF6B00);padding:26px 18px 22px;display:flex;align-items:center;color:#fff;border-radius:0 0 16px 16px;}
+  .avatar{width:52px;height:52px;border-radius:50%;background:#fff;color:var(--orange);font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .mine-info{margin-left:12px;flex:1;}
+  .nick{font-size:16px;font-weight:700;}
+  .phone{font-size:10.5px;color:#FFE9D2;margin-top:4px;}
+  .mine-card{background:#fff;border-radius:8px;margin:-12px 10px 0;padding:12px;}
+  .mc-head{display:flex;align-items:center;font-size:12.5px;font-weight:600;}
+  .mc-head .more{margin-left:auto;font-size:10.5px;color:var(--gray);font-weight:400;}
+  .mc-nums{display:flex;margin-top:12px;}
+  .mc-num{flex:1;text-align:center;}
+  .mc-num b{display:block;color:var(--orange);font-size:16px;}
+  .mc-num span{font-size:10px;color:var(--gray);}
+  .mlist{background:#fff;border-radius:8px;margin:8px 10px 0;padding:0 12px;}
+  .mrow{height:44px;display:flex;align-items:center;font-size:12px;border-bottom:1px solid var(--line);}
+  .mrow:last-child{border-bottom:none;}
+  .mrow .ic{width:18px;color:var(--orange);font-size:13px;margin-right:8px;text-align:center;}
+  .mrow .arr{margin-left:auto;color:#CCC;font-size:14px;}
+  .mver{text-align:center;font-size:9.5px;color:var(--light);margin:18px 0 10px;}
+
+  /* 地址 */
+  .acard{background:#fff;border-radius:8px;margin:8px 10px;padding:12px;}
+  .acard .l1{display:flex;align-items:center;font-size:13px;font-weight:600;}
+  .acard .l1 .ph{margin-left:9px;font-size:11px;color:var(--gray);font-weight:400;flex:1;}
+  .acard .l1 .def{font-size:9px;color:var(--orange);background:var(--orange-light);border:1px solid #FFD9A8;border-radius:3px;padding:1px 4px;}
+  .acard .l2{font-size:11px;margin-top:6px;line-height:1.5;}
+  .acard .l3{display:flex;margin-top:7px;font-size:10px;}
+  .acard .l3 .sel{color:var(--orange);flex:1;}
+  .acard .l3 .ed{color:var(--gray);}
+  .addbtn{margin:14px 12px;height:42px;border-radius:21px;background:var(--orange);color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;}
+
+  /* 支付成功 */
+  .success{background:#fff;height:100%;display:flex;flex-direction:column;align-items:center;padding-top:62px;}
+  .okring{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;font-size:30px;display:flex;align-items:center;justify-content:center;}
+  .oktitle{font-size:19px;font-weight:700;margin-top:16px;}
+  .okamount{font-size:24px;color:var(--orange);font-weight:700;margin-top:9px;}
+  .oktip{font-size:11px;color:var(--gray);text-align:center;line-height:1.7;margin-top:12px;}
+  .okbtns{width:100%;padding:0 24px;margin-top:34px;}
+  .okbtn{height:42px;border-radius:21px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;margin-bottom:10px;}
+  .okbtn.primary{background:var(--orange);color:#fff;}
+  .okbtn.ghost{background:var(--orange-light);color:var(--orange);border:1px solid #FFD9A8;}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>仿美团外卖 · <span>界面预览（升级版）</span></h1>
+  <p>教材第 12 章项目 + 13 项常见外卖功能：搜索、分类、排序筛选、评价、收藏、优惠券、地址、订单中心、个人中心</p>
+</div>
+
+<div class="note">
+  <b>说明：</b>以下是静态界面预览，用于快速查看改版后的视觉效果。真实 App 的交互（搜索、下单、支付、状态流转）需运行 APK 体验。
+  数据为本地演示数据：15 家店铺、约 90 道菜品、SQLite 订单表。
+</div>
+
+<div class="rack">
+
+  <!-- 1. 首页 -->
+  <div class="col">
+    <div class="label">1. 首页 <em>搜索 / 分类 / 排序 / 底部导航</em></div>
+    <div class="phone"><div class="screen">
+      <div class="home-top">
+        <div class="loc"><span class="pin">●</span>湖南科技大学 <span style="font-size:9px;margin-left:2px;">▾</span><span class="city">湘潭 ▾</span></div>
+        <div class="searchbar"><span class="mag"></span><span class="hint">搜索商家、菜品</span><span class="sbtn">搜索</span></div>
+      </div>
+      <div class="scroll">
+        <div class="banner">
+          <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/banner1.jpg" alt="">
+          <div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="cats">
+          <div class="cat"><div class="ico c1">美食</div><div class="nm">美食</div></div>
+          <div class="cat"><div class="ico c2">快餐</div><div class="nm">快餐</div></div>
+          <div class="cat"><div class="ico c3">甜品</div><div class="nm">甜品</div></div>
+          <div class="cat"><div class="ico c4">奶茶</div><div class="nm">奶茶</div></div>
+          <div class="cat"><div class="ico c5">水果</div><div class="nm">水果</div></div>
+          <div class="cat"><div class="ico c6">超市</div><div class="nm">超市</div></div>
+          <div class="cat"><div class="ico c7">药品</div><div class="nm">药品</div></div>
+          <div class="cat"><div class="ico c8">鲜花</div><div class="nm">鲜花</div></div>
+        </div>
+        <div class="sortrow">
+          <span class="on">综合排序</span><span>销量最高</span><span>评分最高</span><span>起送价最低</span>
+        </div>
+        <div class="filters"><span class="chip">满减优惠</span><span class="chip">免配送费</span></div>
+        <div class="sec-title">附近商家（15）</div>
+        <div class="shop-item">
+          <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop4.jpg" alt="">
+          <div class="shop-info">
+            <div class="shop-name">茶百道</div>
+            <div class="shop-meta"><span class="star">★ 4.9</span><span>月售5120</span><span>22分钟</span></div>
+            <div class="shop-row3"><span>¥15起送</span><span class="feature">满20减5</span><span class="right">配送费¥2</span></div>
+          </div>
+        </div>
+        <div class="shop-item">
+          <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop1.jpg" alt="">
+          <div class="shop-info">
+            <div class="shop-name">肯德基宅急送</div>
+            <div class="shop-meta"><span class="star">★ 4.8</span><span>月售1200</span><span>30分钟</span></div>
+            <div class="shop-row3"><span>¥20起送</span><span class="feature">满30减10</span><span class="right">配送费¥5</span></div>
+          </div>
+        </div>
+        <div class="shop-item">
+          <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop2.jpg" alt="">
+          <div class="shop-info">
+            <div class="shop-name">张亮麻辣烫</div>
+            <div class="shop-meta"><span class="star">★ 4.7</span><span>月售3200</span><span>25分钟</span></div>
+            <div class="shop-row3"><span>¥15起送</span><span class="feature">满25减8</span><span class="right">配送费¥3</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottomnav">
+        <div class="navitem on"><span class="ni">⌂</span>首页</div>
+        <div class="navitem"><span class="ni">☰</span>订单</div>
+        <div class="navitem"><span class="ni">◉</span>我的</div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 2. 搜索 -->
+  <div class="col">
+    <div class="label">2. 搜索页 <em>历史 / 热门 / 结果</em></div>
+    <div class="phone"><div class="screen">
+      <div class="search-head">
+        <div class="bk">‹</div>
+        <div class="box"><span class="mag"></span><span class="ph">奶茶</span></div>
+        <div class="go">搜索</div>
+      </div>
+      <div class="tagblock">
+        <div class="tagtitle">搜索历史<span class="clr">清空</span></div>
+        <div class="tags">
+          <span class="tag">炸鸡</span><span class="tag">麻辣烫</span><span class="tag">奶茶</span><span class="tag">披萨</span>
+        </div>
+        <div class="tagtitle" style="margin-top:20px;">热门搜索</div>
+        <div class="tags">
+          <span class="tag hot">奶茶</span><span class="tag hot">炸鸡</span><span class="tag hot">麻辣烫</span>
+          <span class="tag hot">披萨</span><span class="tag hot">水果</span><span class="tag hot">夜宵</span>
+          <span class="tag hot">汉堡</span><span class="tag hot">甜品</span>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 3. 店铺详情 -->
+  <div class="col">
+    <div class="label">3. 店铺详情 <em>收藏 / 评价 / 购物车</em></div>
+    <div class="phone"><div class="screen">
+      <div class="titlebar"><div class="back">‹</div><div class="ttl">茶百道</div><div class="rt">收藏</div></div>
+      <div class="scroll">
+        <div class="dhead">
+          <div class="dtop">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop4.jpg" alt="">
+            <div class="txt">
+              <div class="dname">茶百道</div>
+              <div class="dmeta"><span class="star">★ 4.9</span>　月售5120　22分钟</div>
+              <div class="dmeta">¥15起送 · 配送费¥2</div>
+            </div>
+          </div>
+          <div style="margin-top:8px;"><span class="feature">满20减5</span></div>
+          <div class="review-entry"><span class="st">★</span>4.9分 · 135条评价<span class="more">查看全部 ›</span></div>
+        </div>
+        <div class="menu-title">菜单（共 6 道菜）</div>
+        <div class="menu">
+          <div class="mitem">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/food16.jpg" alt="">
+            <div class="mi">
+              <div class="mname">杨枝甘露</div>
+              <div class="mpop">招牌必喝</div>
+              <div class="msale">月售892</div>
+              <div class="mprice"><span class="p">¥18.00</span><span class="cbtn minus">−</span><span class="cnt">2</span><span class="cbtn plus">+</span></div>
+            </div>
+          </div>
+          <div class="mitem">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/food17.jpg" alt="">
+            <div class="mi">
+              <div class="mname">芋圆奶茶</div>
+              <div class="mpop">Q弹芋圆</div>
+              <div class="msale">月售765</div>
+              <div class="mprice"><span class="p">¥15.00</span><span class="cbtn plus">+</span></div>
+            </div>
+          </div>
+          <div class="mitem">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/food18.jpg" alt="">
+            <div class="mi">
+              <div class="mname">葡萄冻冻</div>
+              <div class="mpop">新鲜果肉</div>
+              <div class="msale">月售683</div>
+              <div class="mprice"><span class="p">¥19.00</span><span class="cbtn plus">+</span></div>
+            </div>
+          </div>
+          <div class="mitem">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/food19.jpg" alt="">
+            <div class="mi">
+              <div class="mname">招牌奶茶</div>
+              <div class="mpop">经典原味</div>
+              <div class="msale">月售921</div>
+              <div class="mprice"><span class="p">¥13.00</span><span class="cbtn plus">+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cartbar">
+        <div class="carticon">▤<span class="badge">2</span></div>
+        <div class="cartinfo"><div class="cartprice">¥36.00</div><div class="carttip">已满足起送价，可以结算了</div></div>
+        <div class="settle">去结算</div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 4. 确认订单 -->
+  <div class="col">
+    <div class="label">4. 确认订单 <em>地址 / 优惠券 / 备注 / 餐具</em></div>
+    <div class="phone"><div class="screen">
+      <div class="titlebar"><div class="back">‹</div><div class="ttl">确认订单</div><div class="rt"></div></div>
+      <div class="scroll">
+        <div class="addr">
+          <div class="pin">●</div>
+          <div class="a-txt">
+            <div class="a1">湖南科技大学 · 计算机科学与工程学院 3 栋 402</div>
+            <div class="a2">李同学　138 8888 8888</div>
+          </div>
+          <div class="arrow">›</div>
+        </div>
+        <div class="rowcard"><span class="ic">◷</span>送达时间<span class="rt">立即送出 ›</span></div>
+        <div class="sec-title" style="margin-top:6px;">已选商品</div>
+        <div class="menu">
+          <div class="mitem" style="align-items:center;">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/food16.jpg" style="width:42px;height:42px;" alt="">
+            <div class="mi" style="justify-content:center;"><div class="mname">杨枝甘露</div><div class="msale">¥18.00 × 2</div></div>
+            <div style="font-size:12px;font-weight:600;align-self:center;">¥36.00</div>
+          </div>
+        </div>
+        <div class="rowcard"><span style="flex:1;">优惠券</span><span class="rt red">-¥5.00（满20减5）›</span></div>
+        <div class="remark-card">
+          <div class="top"><span>订单备注</span><span class="inp">口味、偏好等要求</span></div>
+          <div class="remark-tags">
+            <span class="tag">无接触配送</span><span class="tag">不要辣</span><span class="tag">少放盐</span><span class="tag">无需餐具</span>
+          </div>
+        </div>
+        <div class="rowcard"><span style="flex:1;">餐具份数</span><span class="cbtn minus">−</span><span class="cnt">1</span><span class="cbtn plus">+</span></div>
+        <div class="amount">
+          <div class="line"><span>商品金额</span><span>¥36.00</span></div>
+          <div class="line"><span>配送费</span><span>¥2.00</span></div>
+          <div class="line discount"><span>优惠</span><span>-¥5.00</span></div>
+          <div class="total"><span>合计</span><span class="v">¥33.00</span></div>
+        </div>
+      </div>
+      <div class="paybar">
+        <div class="pt"><div class="p1">合计 ¥33.00</div><div class="p2">共2件商品</div></div>
+        <div class="btn">提交订单</div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 5. 订单中心 -->
+  <div class="col">
+    <div class="label">5. 订单中心 <em>状态 Tab / 取消 / 再来一单</em></div>
+    <div class="phone"><div class="screen">
+      <div class="titlebar"><div class="back">‹</div><div class="ttl">我的订单</div><div class="rt"></div></div>
+      <div class="otabs">
+        <div class="otab on">全部<div class="ind"></div></div>
+        <div class="otab">待支付<div class="ind hide"></div></div>
+        <div class="otab">配送中<div class="ind hide"></div></div>
+        <div class="otab">已完成<div class="ind hide"></div></div>
+      </div>
+      <div class="scroll" style="background:var(--bg);">
+        <div class="ocard">
+          <div class="top">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop4.jpg" alt="">
+            <div class="sn">茶百道</div><div class="ostatus">配送中</div>
+          </div>
+          <div class="mid"><span>杨枝甘露 等 2 件</span><span class="amt">¥33.00</span></div>
+          <div class="bot"><span class="tm">10-19 17:02</span><span class="obtn gray">取消订单</span><span class="obtn org">查看详情</span></div>
+        </div>
+        <div class="ocard">
+          <div class="top">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop1.jpg" alt="">
+            <div class="sn">肯德基宅急送</div><div class="ostatus">待支付</div>
+          </div>
+          <div class="mid"><span>香辣鸡腿堡 等 3 件</span><span class="amt">¥45.50</span></div>
+          <div class="bot"><span class="tm">10-19 16:48</span><span class="obtn gray">取消订单</span><span class="obtn org">去支付</span></div>
+        </div>
+        <div class="ocard">
+          <div class="top">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop2.jpg" alt="">
+            <div class="sn">张亮麻辣烫</div><div class="ostatus gray">已完成</div>
+          </div>
+          <div class="mid"><span>招牌麻辣烫 等 2 件</span><span class="amt">¥28.00</span></div>
+          <div class="bot"><span class="tm">10-18 12:20</span><span class="obtn org">再来一单</span></div>
+        </div>
+        <div class="ocard">
+          <div class="top">
+            <img src="MeiTuanWaiMai/app/src/main/res/drawable-nodpi/shop5.jpg" alt="">
+            <div class="sn">鲍师傅糕点</div><div class="ostatus gray">已取消</div>
+          </div>
+          <div class="mid"><span>肉松小贝 等 4 件</span><span class="amt">¥36.00</span></div>
+          <div class="bot"><span class="tm">10-17 19:05</span><span class="obtn org">再来一单</span></div>
+        </div>
+      </div>
+      <div class="bottomnav">
+        <div class="navitem"><span class="ni">⌂</span>首页</div>
+        <div class="navitem on"><span class="ni">☰</span>订单</div>
+        <div class="navitem"><span class="ni">◉</span>我的</div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 6. 我的 -->
+  <div class="col">
+    <div class="label">6. 我的 <em>昵称 / 订单统计 / 功能入口</em></div>
+    <div class="phone"><div class="screen">
+      <div class="scroll">
+        <div class="mine-head">
+          <div class="avatar">李</div>
+          <div class="mine-info"><div class="nick">李同学</div><div class="phone">138****8888</div></div>
+          <div style="color:#fff;font-size:16px;">›</div>
+        </div>
+        <div class="mine-card">
+          <div class="mc-head">我的订单<span class="more">查看全部订单 ›</span></div>
+          <div class="mc-nums">
+            <div class="mc-num"><b>1</b><span>待支付</span></div>
+            <div class="mc-num"><b>1</b><span>配送中</span></div>
+            <div class="mc-num"><b>6</b><span>已完成</span></div>
+          </div>
+        </div>
+        <div class="mlist">
+          <div class="mrow"><span class="ic">●</span>收货地址<span class="arr">›</span></div>
+          <div class="mrow"><span class="ic">♥</span>我的收藏<span class="arr">›</span></div>
+          <div class="mrow"><span class="ic">▣</span>优惠券<span class="arr">›</span></div>
+          <div class="mrow"><span class="ic">◉</span>关于我们<span class="arr">›</span></div>
+        </div>
+        <div class="mver">美团外卖 · 课程设计演示版 v2.0</div>
+      </div>
+      <div class="bottomnav">
+        <div class="navitem"><span class="ni">⌂</span>首页</div>
+        <div class="navitem"><span class="ni">☰</span>订单</div>
+        <div class="navitem on"><span class="ni">◉</span>我的</div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- 7. 地址 -->
+  <div class="col">
+    <div class="label">7. 收货地址 <em>新增 / 编辑 / 默认</em></div>
+    <div class="phone"><div class="screen">
+      <div class="titlebar"><div class="back">‹</div><div class="ttl">收货地址</div><div class="rt"></div></div>
+      <div class="scroll">
+        <div class="acard">
+          <div class="l1">李同学<span class="ph">138 8888 8888</span><span class="def">默认</span></div>
+          <div class="l2">湖南科技大学 · 计算机科学与工程学院 3 栋 402</div>
+          <div class="l3"><span class="sel">点击选择该地址</span><span class="ed">编辑</span></div>
+        </div>
+        <div class="acard">
+          <div class="l1">王同学<span class="ph">139 6666 6666</span></div>
+          <div class="l2">湖南科技大学 · 南校区 7 栋 215</div>
+          <div class="l3"><span class="sel">点击选择该地址</span><span class="ed">编辑</span></div>
+        </div>
+        <div class="acard">
+          <div class="l1">张先生<span class="ph">137 5555 5555</span></div>
+          <div class="l2">湘潭市雨湖区 · 九华经济开发区 8 号</div>
+          <div class="l3"><span class="sel">点击选择该地址</span><span class="ed">编辑</span></div>
+        </div>
+      </div>
+      <div class="addbtn">+ 新增收货地址</div>
+    </div></div>
+  </div>
+
+  <!-- 8. 支付成功 -->
+  <div class="col">
+    <div class="label">8. 支付成功 <em>查看订单 / 返回首页</em></div>
+    <div class="phone"><div class="screen">
+      <div class="success">
+        <div class="okring">✓</div>
+        <div class="oktitle">支付成功</div>
+        <div class="okamount">¥33.00</div>
+        <div class="oktip">茶百道 正在为你备餐<br>预计 30 分钟送达</div>
+        <div class="okbtns">
+          <div class="okbtn primary">查看订单</div>
+          <div class="okbtn ghost">返回首页</div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+</div>
+
+</body>
+</html>

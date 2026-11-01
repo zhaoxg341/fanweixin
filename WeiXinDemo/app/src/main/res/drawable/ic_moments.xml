@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 朋友圈：微信真实样式——左蓝右黄的圆圈 + 白色波浪 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 蓝黄底圆 -->
+    <path
+        android:fillColor="#3C82F6"
+        android:pathData="M12,2.5 a9.5,9.5 0 0 1 9.5,9.5 a9.5,9.5 0 0 1 -9.5,9.5 z" />
+    <path
+        android:fillColor="#F6C33C"
+        android:pathData="M12,2.5 a9.5,9.5 0 0 0 -9.5,9.5 a9.5,9.5 0 0 0 9.5,9.5 z" />
+    <!-- 白色波浪带 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M2.5,12 q4.7,-4.5 9.5,0 q4.8,4.5 9.5,0 l0,3.2 q-4.7,4.5 -9.5,0 q-4.8,-4.5 -9.5,0 z" />
+</vector>

@@ -1,0 +1,9 @@
+﻿资源统计: layout=33 drawable=101 color=15 string=170 style=6 dimen=8 mipmap=2
+Java 文件数=45，XML 文件数=109
+布局定义的 id 数量=126，Java 使用的 id 数量=118
+------------------------------------------------------------
+发现 4 个问题:
+  [X] MomentAdapter.java: R.drawable.list_selector_background 未找到
+  [X] activity_game.xml: @color/game_chip_text 未找到
+  [X] activity_game.xml: @color/game_chip_text 未找到
+  [X] activity_game.xml: @color/game_chip_text 未找到

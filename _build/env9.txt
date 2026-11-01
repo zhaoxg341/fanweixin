@@ -1,0 +1,11 @@
+=== D:\SDK\gradle-8.2\wrapper\dists tree ===
+D:\SDK\gradle-8.2\wrapper\dists\gradle-8.2-bin
+D:\SDK\gradle-8.2\wrapper\dists\CACHEDIR.TAG
+D:\SDK\gradle-8.2\wrapper\dists\gradle-8.2-bin\bbg7u40eoinfdyxsxr3z4i7ta
+D:\SDK\gradle-8.2\wrapper\dists\gradle-8.2-bin\bbg7u40eoinfdyxsxr3z4i7ta\gradle-8.2-bin.zip.lck
+D:\SDK\gradle-8.2\wrapper\dists\gradle-8.2-bin\bbg7u40eoinfdyxsxr3z4i7ta\gradle-8.2-bin.zip.part
+=== C:\Users\lenovo\.gradle\wrapper\dists tree ===
+C:\Users\lenovo\.gradle\wrapper\dists\gradle-8.2-bin
+C:\Users\lenovo\.gradle\wrapper\dists\gradle-8.2-bin\bbg7u40eoinfdyxsxr3z4i7ta
+C:\Users\lenovo\.gradle\wrapper\dists\gradle-8.2-bin\bbg7u40eoinfdyxsxr3z4i7ta\gradle-8.2-bin.zip.lck
+C:\Users\lenovo\.gradle\wrapper\dists\gradle-8.2-bin\bbg7u40eoinfdyxsxr3z4i7ta\gradle-8.2-bin.zip.part

@@ -1,0 +1,10 @@
+.tools/
+.gradle/
+**/build/
+local.properties
+backend/.venv/
+backend/*.db
+**/__pycache__/
+.pytest_cache/
+.idea/
+*.iml

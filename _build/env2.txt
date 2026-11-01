@@ -1,0 +1,13 @@
+﻿C:\Android = False
+D:\Android = False
+D:\Android\Sdk = False
+C:\Users\lenovo\AppData\Local\Android = False
+D:\Program Files\Android = False
+C:\Program Files\Android = False
+D:\AndroidStudio = False
+C:\Users\lenovo\AppData\Local\Android\Sdk = False
+--- adb ---
+--- gradle user home ---
+False
+--- D root dirs ---
+altera, BaiduNetdisk, BaiduNetdiskDownload, Drivers, GameDownload, IEDA, IntelliJidea, java21, LegionZone, LenovoSoftstore, LeStoreDownload, minGW, OS_CourseDesign_2026, Program Files, Program Files (x86), ProgramData, QLDownload, QLDownloadGame, QQMusicCache, qycache, SteamLibrary, web学习, web实验, WeGameApps, workbuudy, WPS Software, 哔哩哔哩, 实验文件夹, 实验软件, 应用程序, 微信开发者, 新建文件夹, 无畏契约, 腾讯会议, 通信课设, 项目开发学习

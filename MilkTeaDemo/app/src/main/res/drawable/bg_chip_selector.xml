@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 规格选项状态选择器，Java 里通过 setSelected() 切换 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_chip_selected" android:state_selected="true" />
+    <item android:drawable="@drawable/bg_chip_normal" />
+</selector>

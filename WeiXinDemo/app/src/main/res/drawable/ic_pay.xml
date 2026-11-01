@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务（绿，钱包） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#07C160"
+        android:pathData="M4.5,5 h13 a1.5,1.5 0 0 1 1.5,1.5 V8 H4.5 Z" />
+    <path
+        android:fillColor="#07C160"
+        android:pathData="M3,8 h18 a2,2 0 0 1 2,2 v3 h-4 a2.5,2.5 0 0 0 0,5 h4 v1 a2,2 0 0 1 -2,2 H3 a2,2 0 0 1 -2,-2 V10 a2,2 0 0 1 2,-2 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M19,13 m-1.4,0 a1.4,1.4 0 1 1 0.001,0 z" />
+</vector>

@@ -1,0 +1,31 @@
+﻿drawable-nodpi jpg count = 27
+mipmap launcher = 10
+json bytes = 6945
+   avatar1.jpg
+   avatar10.jpg
+   avatar11.jpg
+   avatar12.jpg
+   avatar13.jpg
+   avatar14.jpg
+   avatar15.jpg
+   avatar16.jpg
+   avatar2.jpg
+   avatar3.jpg
+   avatar4.jpg
+   avatar5.jpg
+   avatar6.jpg
+   avatar7.jpg
+   avatar8.jpg
+   avatar9.jpg
+   avatar_group.jpg
+   avatar_me.jpg
+   avatar_mp.jpg
+   avatar_team.jpg
+   moment1.jpg
+   moment2.jpg
+   moment3.jpg
+   moment4.jpg
+   moment5.jpg
+   moment6.jpg
+   moments_cover.jpg
+

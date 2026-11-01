@@ -1,0 +1,686 @@
+[
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_avatar_selected.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_avatar_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar_me.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar_me.jpg"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_item_msg_right.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/item_msg_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar_group.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar_group.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_game_gesture.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_game_gesture.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar9.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar9.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_card_matched.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_card_matched.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_moments.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_moments.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_video_call.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_video_call.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_moment6.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\moment6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_avatar_row.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_avatar_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_msg_time.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_msg_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar1.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_chat_sel.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_chat_sel.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_voice.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_voice.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_contact.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_tab_item_selector.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_tab_item_selector.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_item_chat.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/item_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_shake.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_shake.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar8.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar8.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_group_chat.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_group_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_panel_top.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_panel_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_heart.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_heart.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_pay.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_pay.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_new_friend.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_new_friend.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_msg_left.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_msg_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_qr.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_qr.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_search.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_moments_header.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\moments_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_chat.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar12.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar12.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_chat.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar2.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_tab_item.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\tab_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_btn_green_selector.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_btn_green_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_dialog_comment.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\dialog_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_contacts.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_contacts.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_discover.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_discover.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_dialog_chat_more.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\dialog_chat_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_me.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_me.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_activity_settings.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar7.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar7.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_emoji.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_emoji.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_scan.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_scan.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_search_blue.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_search_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_cell.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_cell.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_dialog_redpacket_send.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\dialog_redpacket_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_publish_moment.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_publish_moment.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_fragment_chats.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\fragment_chats.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_comment_bubble.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_comment_bubble.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_fragment_discover.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\fragment_discover.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar4.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar11.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar11.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_look.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_look.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar14.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar14.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_score_panel.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_score_panel.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_channels.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_channels.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_game.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_game.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/drawable_ic_fav.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/drawable/ic_fav.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_discover.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_discover.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/drawable_bg_search.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/drawable/bg_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar17.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar17.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_item_selector.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_item_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_moment_grid.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_moment_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_card.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_dialog_edit.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\dialog_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_moment.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_moment.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_moment2.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\moment2.jpg"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/drawable_bg_transfer.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/drawable/bg_transfer.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_bubble_arrow_right.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_bubble_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_fragment_me.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\fragment_me.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_emoji_gray.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_emoji_gray.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_avatar_choice.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_avatar_choice.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\color_game_chip_text.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\color\\game_chip_text.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_dialog_chat_more.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/dialog_chat_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_chat.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_moment5.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\moment5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_login_input.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_login_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_me_sel.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_me_sel.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_moments.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_moments.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_game_lobby.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_game_lobby.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_dialog_emoji_panel.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/dialog_emoji_panel.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_circle_dark.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_circle_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_moment3.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\moment3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_input.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_discover_sel.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_discover_sel.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tab_contacts_sel.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tab_contacts_sel.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_func_item.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_func_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_redpacket.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_redpacket.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_bubble_right.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_bubble_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_msg_right.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_msg_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_add_circle.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_add_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar_mp.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar_mp.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_more.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar6.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar16.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar16.jpg"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_item_setting.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/item_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_shop.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_album.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_album.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_game_chip.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_game_chip.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_redpacket.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_redpacket.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_badge.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_badge.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_tag.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_tag.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_dialog_transfer_send.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/dialog_transfer_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_voice_wave.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_voice_wave.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_contact_header.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_contact_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_dialog_avatar_picker.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\dialog_avatar_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_game.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_game.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_mine.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_mine.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_card_back.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_card_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_avatar_default.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\avatar_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_dialog_redpacket_open.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\dialog_redpacket_open.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_game_header.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_game_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_close_small.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_close_small.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_title_bar.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\title_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar5.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar15.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar15.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_fav.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_fav.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_mp.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_mp.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_game_icon.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_game_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_bubble_arrow_left.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_bubble_arrow_left.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_activity_favorite.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/activity_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_moment1.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\moment1.jpg"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_item_msg_left.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/item_msg_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_btn_outline_green.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_btn_outline_green.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_photo_viewer.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_photo_viewer.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/drawable_bg_bubble_left.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/drawable/bg_bubble_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_tag_green_light.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_tag_green_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_camera.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_album_photo.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_album_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_heart_filled.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_heart_filled.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar3.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_plus.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_plus.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/drawable_ic_moments.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/drawable/ic_moments.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/drawable_bg_bubble_right.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/drawable/bg_bubble_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_location_pin.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_location_pin.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_item_emoji.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/item_emoji.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_ic_nearby.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\ic_nearby.xml"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/drawable_ic_transfer.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/drawable/ic_transfer.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_gap.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_gap.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_item_contact_entry.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\item_contact_entry.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_moment4.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\moment4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_card_white.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_card_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_fragment_contacts.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\fragment_contacts.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_open_btn.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_open_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_hold_talk.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_hold_talk.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_bubble_left.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_bubble_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar13.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar13.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_dialog.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar_team.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar_team.jpg"
+    },
+    {
+        "merged": "cn.itcast.weixin.app-merged_res-20:/layout_item_favorite.xml.flat",
+        "source": "cn.itcast.weixin.app-main-22:/layout/item_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_user_info.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_user_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable_bg_photo_add.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable\\bg_photo_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_moments_cover.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\moments_cover.jpg"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-merged_res-20:\\drawable-nodpi_avatar10.jpg.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\8.2\\cn.itcast.weixin.app-main-22:\\drawable-nodpi\\avatar10.jpg"
+    }
+]

@@ -1,0 +1,21 @@
+自写 Java 类数量: 18
+  - cn.itcast.order.activity.FoodDetailActivity
+  - cn.itcast.order.activity.OrderActivity
+  - cn.itcast.order.activity.PayActivity
+  - cn.itcast.order.activity.ShopDetailActivity
+  - cn.itcast.order.activity.ShopListActivity
+  - cn.itcast.order.adapter.AdBannerAdapter
+  - cn.itcast.order.adapter.CartAdapter
+  - cn.itcast.order.adapter.MenuAdapter
+  - cn.itcast.order.adapter.OrderAdapter
+  - cn.itcast.order.adapter.ShopAdapter
+  - cn.itcast.order.bean.FoodBean
+  - cn.itcast.order.bean.ShopBean
+  - cn.itcast.order.utils.CartManager
+  - cn.itcast.order.utils.Constant
+  - cn.itcast.order.utils.HttpUtil
+  - cn.itcast.order.utils.ShopDataUtils
+  - cn.itcast.order.view.ShopListView
+  - cn.itcast.order.view.ViewPagerIndicator
+------------------------------------------------------------
+Java 交叉校验通过：类名、导入、跨类静态调用、接口实现均正常。

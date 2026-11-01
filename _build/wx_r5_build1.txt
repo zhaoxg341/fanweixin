@@ -1,0 +1,131 @@
+﻿Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+gradle.bat : Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of ver
+sion 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were rele
+ased at different times.
+所在位置 行:445 字符: 102
++ ... o\.gradle"; & "D:\SDK\gradle-8.2\bin\gradle.bat" -p "C:\Users\lenovo\ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: SDK pr...ifferent times.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:mergeLibDexDebug
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeExtDexDebug
+> Task :app:processDebugResources
+
+> Task :app:compileDebugJavaWithJavac
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+78: 错误: 找不到符号
+    private final Random random = new Random();
+                  ^
+  符号:   类 Random
+  位置: 类 ChatActivity
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+78: 错误: 找不到符号
+    private final Random random = new Random();
+                                      ^
+  符号:   类 Random
+  位置: 类 ChatActivity
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+229: 错误: 找不到符号
+                showRedPacketOpenDialog(msg);
+                ^
+  符号: 方法 showRedPacketOpenDialog(MsgBean)
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+234: 错误: 找不到符号
+                showMsgMenu(msg);
+                ^
+  符号: 方法 showMsgMenu(MsgBean)
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+341: 错误: 找不到符号
+            public boolean onTouch(View v, MotionEvent event) {
+                                           ^
+  符号: 类 MotionEvent
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+343: 错误: 程序包MotionEvent不存在
+                    case MotionEvent.ACTION_DOWN:
+                                    ^
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+349: 错误: 程序包MotionEvent不存在
+                    case MotionEvent.ACTION_UP:
+                                    ^
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+350: 错误: 程序包MotionEvent不存在
+                    case MotionEvent.ACTION_CANCEL:
+                                    ^
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+353: 错误: 找不到符号
+                        if (event.getActionMasked() == MotionEvent.ACTION_UP) {
+                                                       ^
+  符号: 变量 MotionEvent
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\activity\ChatActivity.java:
+405: 错误: 找不到符号
+                showRedPacketSendDialog();
+                ^
+  符号: 方法 showRedPacketSendDialog()
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\utils\ChatManager.java:260:
+ 错误: 找不到符号
+        MessageDao.updateContent(msg.getId(), msg.getContent());
+                  ^
+  符号:   方法 updateContent(int,String)
+  位置: 类 MessageDao
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\utils\ChatManager.java:302:
+ 错误: 找不到符号
+        MessageDao.markRecalled(msg.getId());
+                  ^
+  符号:   方法 markRecalled(int)
+  位置: 类 MessageDao
+C:\Users\lenovo\WorkBuddy\2026-10-12-14-18-05\WeiXinDemo\app\src\main\java\cn\itcast\weixin\utils\ChatManager.java:313:
+ 错误: 找不到符号
+        MessageDao.deleteById(msg.getId());
+                  ^
+  符号:   方法 deleteById(int)
+  位置: 类 MessageDao
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+13 个错误
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 40s
+26 actionable tasks: 13 executed, 13 up-to-date

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 看一看（黄，眼睛） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#F5C24C"
+        android:strokeWidth="2"
+        android:pathData="M2,12 c2.6,-4.4 6,-6.6 10,-6.6 s7.4,2.2 10,6.6 c-2.6,4.4 -6,6.6 -10,6.6 S4.6,16.4 2,12 z" />
+    <path
+        android:fillColor="#F5C24C"
+        android:pathData="M12,12 m-3,0 a3,3 0 1 1 0.001,0 z" />
+</vector>

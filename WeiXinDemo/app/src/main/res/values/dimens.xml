@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 列表条目高度 -->
+    <dimen name="item_height">56dp</dimen>
+    <dimen name="item_height_small">44dp</dimen>
+    <!-- 头像尺寸 -->
+    <dimen name="avatar_size">46dp</dimen>
+    <dimen name="avatar_size_small">38dp</dimen>
+    <dimen name="avatar_size_large">64dp</dimen>
+    <!-- 侧边左右间距 -->
+    <dimen name="page_padding">16dp</dimen>
+    <!-- 底部导航栏高度 -->
+    <dimen name="tab_bar_height">54dp</dimen>
+    <!-- 通用分割线 -->
+    <dimen name="divider_height">0.5dp</dimen>
+</resources>

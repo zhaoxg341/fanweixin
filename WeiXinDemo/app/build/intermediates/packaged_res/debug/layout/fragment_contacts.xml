@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通讯录 Tab：联系人列表 + 中央字母提示 + 右侧字母索引栏 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ListView
+        android:id="@+id/list_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:paddingRight="24dp"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_letter_hint"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_dialog"
+        android:gravity="center"
+        android:textColor="@color/text_secondary"
+        android:textSize="32sp"
+        android:visibility="gone" />
+
+    <cn.itcast.weixin.view.SideIndexBar
+        android:id="@+id/index_bar"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end" />
+</FrameLayout>

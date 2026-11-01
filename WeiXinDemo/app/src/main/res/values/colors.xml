@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 微信主色 -->
+    <color name="weixin_green">#07C160</color>
+    <color name="weixin_green_dark">#06AD56</color>
+    <color name="bubble_green">#95EC69</color>
+    <color name="link_blue">#576B95</color>
+
+    <!-- 背景 -->
+    <color name="bg_gray">#EDEDED</color>
+    <color name="bg_page">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="item_press">#E2E2E2</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#191919</color>
+    <color name="text_secondary">#888888</color>
+    <color name="text_hint">#B2B2B2</color>
+    <color name="icon_gray">#7F7F7F</color>
+
+    <!-- 分割线与功能色 -->
+    <color name="line_gray">#E0E0E0</color>
+    <color name="badge_red">#FA5151</color>
+    <color name="translucent">#33000000</color>
+</resources>

@@ -1,0 +1,18 @@
+{
+  "orderCount": 4,
+  "allPaid": true,
+  "cartBeforeRestart": [
+    [
+      "r1",
+      "rice",
+      1
+    ]
+  ],
+  "cartRestoredInUI": true,
+  "ordersRestoredInUI": true,
+  "remoteOrders": [
+    "YBE36445224BFF",
+    "YB75E51B876C30",
+    "YB68441FDA3A13"
+  ]
+}

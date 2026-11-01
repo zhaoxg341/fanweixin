@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 订单列表条目（对应教材 12.7.2 搭建订单列表条目界面布局） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_order_food_pic"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food1" />
+
+    <TextView
+        android:id="@+id/tv_order_food_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="菜品名称"
+        android:textColor="@color/text_black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_order_food_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥18.50"
+        android:textColor="@color/text_gray"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_order_food_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="x1"
+        android:textColor="@color/text_gray"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_order_food_subtotal"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="end"
+        android:text="¥18.50"
+        android:textColor="@color/text_black"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 全局主题：无标题栏，配合自定义标题栏使用 -->
+    <style name="Theme.WeiXin" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/weixin_green</item>
+        <item name="colorPrimaryDark">@color/weixin_green_dark</item>
+        <item name="colorAccent">@color/weixin_green</item>
+        <item name="android:windowBackground">@color/bg_gray</item>
+    </style>
+
+    <!-- 标题栏文字 -->
+    <style name="TitleBarText">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxWidth">200dp</item>
+    </style>
+
+    <!-- 列表主标题 -->
+    <style name="ItemTitle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- 列表副标题 -->
+    <style name="ItemSubTitle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- 分组小标题（灰色） -->
+    <style name="GroupTitle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+    <!-- 底部滑出的面板（聊天页「+」、朋友圈评论框） -->
+    <style name="BottomSheetDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

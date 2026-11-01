@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 美团外卖主色 -->
+    <color name="orange">#FF7D00</color>
+    <color name="orange_dark">#E86600</color>
+    <color name="orange_light">#FFF8E1</color>
+    <color name="orange_bg">#FFF3E6</color>
+
+    <!-- 文字 -->
+    <color name="text_black">#333333</color>
+    <color name="text_gray">#7E7E7E</color>
+    <color name="text_light">#B5B5B5</color>
+    <color name="text_dark">#222222</color>
+
+    <!-- 背景 / 分割线 -->
+    <color name="bg_gray">#F5F5F5</color>
+    <color name="bg_page">#F2F2F2</color>
+    <color name="line_gray">#D4D4D4</color>
+    <color name="line_light">#EEEEEE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="translucent">#33000000</color>
+    <color name="badge_red">#FF3B30</color>
+    <color name="btn_gray">#C9C9C9</color>
+
+    <!-- 状态色 -->
+    <color name="green">#2BA471</color>
+    <color name="blue">#3B7CFF</color>
+    <color name="red">#FF3B30</color>
+    <color name="coupon_red">#FF5A5A</color>
+
+    <!-- 分类频道配色 -->
+    <color name="cat_1">#FFB300</color>
+    <color name="cat_2">#FF7043</color>
+    <color name="cat_3">#66BB6A</color>
+    <color name="cat_4">#42A5F5</color>
+    <color name="cat_5">#AB47BC</color>
+    <color name="cat_6">#EC407A</color>
+    <color name="cat_7">#26A69A</color>
+    <color name="cat_8">#7E57C2</color>
+</resources>

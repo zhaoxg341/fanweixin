@@ -1,0 +1,8 @@
+﻿USERPROFILE=C:\Users\lenovo
+[Environment]::GetFolderPath(Desktop)=C:\Users\lenovo\Desktop
+--- C:\Users\lenovo\Desktop exists=True
+033e6b188a4b4c14ab3649329a2c47d7 | 1 | Zz协议 | 新建文件夹 | 最终公示版 | 本部 | 111.docx | 2026创业实践计划立项申请书-农翼双驱—智慧农业专家.docx | 2026创业实践计划立项申请书-农翼双驱—智慧农业专家_S202610534023S.pdf | 2405040119-赵学刚.docx | 2405040119-赵学刚.xlsx | 24物联网一班-赵学刚-2405040119.zip | 24级-物联网一班.zip | 48da5e13f3ac4eaa8802741fc7a5231ec.doc | Android Studio.lnk | Chained Together.url | desktop.ini | Embarcadero Dev-C++.lnk | Excel.lnk | Grand Theft Auto V.url | PowerPoint.lnk | Wallpaper Engine：壁纸引擎.url | Windows实用工具.lnk | WorkBuddy.lnk | WPS Office.lnk | 低轨创未.docx | 关于本部学院大创项目管理工作承诺书.docx | 午夜轮班.url | 夸克.lnk | 微信开发者工具.lnk | 新建文件夹.zip | 智联环境：基于窄带物联网的智能监测终端系统项目计划书.docx | 最终公示版.rar | 百度网盘.lnk | 联想PDF转换器.lnk | 联想应用商店.lnk | 雷神加速器.lnk
+--- C:\Users\lenovo\OneDrive\Desktop exists=False
+--- C:\Users\lenovo\OneDrive\桌面 exists=False
+--- C:\Users\Public\Desktop exists=True
+desktop.ini | Epic Games Launcher.lnk | IntelliJ IDEA 2026.1.3.lnk | Legion Zone.lnk | Microsoft Edge.lnk | QQ.lnk | QQ音乐.lnk | Steam.lnk | Visual Studio Code.lnk | 哔哩哔哩.lnk | 壁纸中心.lnk | 微信.lnk | 无畏契约.lnk | 火绒安全软件.lnk | 联想浏览器.lnk | 联想超级文件.lnk | 腾讯会议.lnk

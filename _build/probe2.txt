@@ -1,0 +1,16 @@
+﻿===== C:\Users\lenovo\AppData\Local\Android\Sdk =====
+.temp\ | emulator\ | licenses\
+===== C:\Users\lenovo\AppData\Local\Android =====
+Sdk\
+===== D:\安卓 =====
+bin\ | jbr\ | lib\ | license\ | modules\ | plugins\ | SDK\ | build.txt | LICENSE.txt | NOTICE.txt | product-info.json | uninstall.exe
+===== C:\AndrowsData =====
+app\
+===== D:\Sdk =====
+.temp\ | build-tools\ | emulator\ | licenses\ | platform-tools\ | platforms\ | sources\
+===== D:\Program Files =====
+Lenovo | Tencent | 腾讯游戏
+===== search android studio (depth-limited) =====
+D:\安卓
+===== studio64.exe search =====
+D:\安卓\bin\studio64.exe

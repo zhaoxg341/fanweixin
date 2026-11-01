@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 菜单列表条目（对应教材 12.5.2 搭建菜单列表条目界面布局） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- 菜品图片 -->
+    <ImageView
+        android:id="@+id/iv_food_pic"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- 菜品名称 -->
+        <TextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="菜品名称"
+            android:textColor="@color/text_black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- 人气标签 -->
+        <TextView
+            android:id="@+id/tv_popularity"
+            style="@style/FeatureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="人气爆款" />
+
+        <!-- 月售量 -->
+        <TextView
+            android:id="@+id/tv_food_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="月售100"
+            android:textColor="@color/text_gray"
+            android:textSize="11sp" />
+
+        <!-- 价格 + 加减控件 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_food_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="¥18.50"
+                android:textColor="@color/orange"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- 减少按钮：数量为 0 时隐藏 -->
+            <TextView
+                android:id="@+id/tv_reduce"
+                style="@style/CountBtn"
+                android:text="−"
+                android:textColor="@color/orange"
+                android:background="@drawable/bg_circle_orange_stroke"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_food_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:minWidth="16dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <!-- 添加按钮 -->
+            <TextView
+                android:id="@+id/tv_add"
+                style="@style/CountBtn"
+                android:background="@drawable/bg_circle_orange"
+                android:text="+" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

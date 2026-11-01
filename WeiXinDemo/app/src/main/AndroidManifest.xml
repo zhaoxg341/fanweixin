@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 联网权限：若启用服务器模式需要用到 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".WeixinApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.WeiXin">
+
+        <!-- 登录页：填昵称与服务器地址，用户已登录时会直接跳到主界面 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主界面：底部四个 Tab（微信 / 通讯录 / 发现 / 我） -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 聊天界面 -->
+        <activity
+            android:name=".activity.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 朋友圈 -->
+        <activity
+            android:name=".activity.MomentsActivity"
+            android:exported="false" />
+
+        <!-- 发动态：文字 + 相册图片 -->
+        <activity
+            android:name=".activity.PublishMomentActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 小游戏：从聊天页「+」或发现页游戏大厅进入 -->
+        <activity
+            android:name=".activity.GameActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 游戏大厅：三个玩法 + 选择对手 -->
+        <activity
+            android:name=".activity.GameLobbyActivity"
+            android:exported="false" />
+
+        <!-- 全屏看大图：朋友圈九宫格、聊天气泡里的图片都跳这里 -->
+        <activity
+            android:name=".activity.PhotoViewerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.WeiXin" />
+
+        <!-- 联系人资料页 -->
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:exported="false" />
+
+        <!-- 收藏页（我-收藏） -->
+        <activity
+            android:name=".activity.FavoriteActivity"
+            android:exported="false" />
+
+        <!-- 设置页（我-设置） -->
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>

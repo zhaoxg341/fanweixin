@@ -1,0 +1,303 @@
+{
+  "user": {
+    "nickName": "赵学刚",
+    "weixinId": "zhaoxg_2026",
+    "avatar": "avatar_me.jpg",
+    "region": "湖南 湘潭",
+    "signature": "在做一个仿微信的 Android 项目"
+  },
+  "chats": [
+    {
+      "id": 1,
+      "name": "张三",
+      "avatar": "avatar1.jpg",
+      "lastMsg": "明天记得把操作系统课设的实验报告交了",
+      "time": "12:30",
+      "unread": 2,
+      "group": false
+    },
+    {
+      "id": 2,
+      "name": "物联网一班通知群",
+      "avatar": "avatar_group.jpg",
+      "lastMsg": "班长：本周五下午两点在学院楼 302 开班会",
+      "time": "11:05",
+      "unread": 5,
+      "group": true
+    },
+    {
+      "id": 3,
+      "name": "李思思",
+      "avatar": "avatar2.jpg",
+      "lastMsg": "好的，那下午三点图书馆见",
+      "time": "10:12",
+      "unread": 0,
+      "group": false
+    },
+    {
+      "id": 4,
+      "name": "微信团队",
+      "avatar": "avatar_team.jpg",
+      "lastMsg": "你的微信已在新设备上登录",
+      "time": "昨天",
+      "unread": 0,
+      "group": false
+    },
+    {
+      "id": 5,
+      "name": "王五",
+      "avatar": "avatar3.jpg",
+      "lastMsg": "[图片]",
+      "time": "昨天",
+      "unread": 0,
+      "group": false
+    },
+    {
+      "id": 6,
+      "name": "陈晓",
+      "avatar": "avatar4.jpg",
+      "lastMsg": "你上次说的那个仿美团的项目做完了吗",
+      "time": "昨天",
+      "unread": 1,
+      "group": false
+    },
+    {
+      "id": 7,
+      "name": "刘敏",
+      "avatar": "avatar5.jpg",
+      "lastMsg": "食堂三楼新开了一家麻辣香锅",
+      "time": "星期一",
+      "unread": 0,
+      "group": false
+    },
+    {
+      "id": 8,
+      "name": "订阅号消息",
+      "avatar": "avatar_mp.jpg",
+      "lastMsg": "今日热点：Android 15 开发者预览版发布",
+      "time": "星期一",
+      "unread": 0,
+      "group": false
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "阿布",
+      "letter": "A",
+      "avatar": "avatar6.jpg",
+      "weixinId": "abu_2026",
+      "region": "湖南 长沙"
+    },
+    {
+      "id": 2,
+      "name": "陈晓",
+      "letter": "C",
+      "avatar": "avatar4.jpg",
+      "weixinId": "chenxiao_0512",
+      "region": "湖南 湘潭"
+    },
+    {
+      "id": 3,
+      "name": "程雨",
+      "letter": "C",
+      "avatar": "avatar7.jpg",
+      "weixinId": "chengyu_0918",
+      "region": "湖北 武汉"
+    },
+    {
+      "id": 4,
+      "name": "邓超",
+      "letter": "D",
+      "avatar": "avatar8.jpg",
+      "weixinId": "dengchao_0307",
+      "region": "湖南 株洲"
+    },
+    {
+      "id": 5,
+      "name": "何静",
+      "letter": "H",
+      "avatar": "avatar9.jpg",
+      "weixinId": "hejing_1123",
+      "region": "湖南 衡阳"
+    },
+    {
+      "id": 6,
+      "name": "胡明",
+      "letter": "H",
+      "avatar": "avatar10.jpg",
+      "weixinId": "huming_0621",
+      "region": "江西 南昌"
+    },
+    {
+      "id": 7,
+      "name": "李思思",
+      "letter": "L",
+      "avatar": "avatar2.jpg",
+      "weixinId": "lisisi_0204",
+      "region": "湖南 湘潭"
+    },
+    {
+      "id": 8,
+      "name": "刘敏",
+      "letter": "L",
+      "avatar": "avatar5.jpg",
+      "weixinId": "liumin_0715",
+      "region": "湖南 常德"
+    },
+    {
+      "id": 9,
+      "name": "罗浩",
+      "letter": "L",
+      "avatar": "avatar11.jpg",
+      "weixinId": "luohao_0329",
+      "region": "广东 广州"
+    },
+    {
+      "id": 10,
+      "name": "马晓东",
+      "letter": "M",
+      "avatar": "avatar12.jpg",
+      "weixinId": "maxiaodong_0811",
+      "region": "湖南 湘潭"
+    },
+    {
+      "id": 11,
+      "name": "孙悦",
+      "letter": "S",
+      "avatar": "avatar13.jpg",
+      "weixinId": "sunyue_1226",
+      "region": "湖南 岳阳"
+    },
+    {
+      "id": 12,
+      "name": "王五",
+      "letter": "W",
+      "avatar": "avatar3.jpg",
+      "weixinId": "wangwu_0503",
+      "region": "湖南 湘潭"
+    },
+    {
+      "id": 13,
+      "name": "吴倩",
+      "letter": "W",
+      "avatar": "avatar14.jpg",
+      "weixinId": "wuqian_0914",
+      "region": "湖南 益阳"
+    },
+    {
+      "id": 14,
+      "name": "张三",
+      "letter": "Z",
+      "avatar": "avatar1.jpg",
+      "weixinId": "zhangsan_0101",
+      "region": "湖南 湘潭"
+    },
+    {
+      "id": 15,
+      "name": "周婷",
+      "letter": "Z",
+      "avatar": "avatar15.jpg",
+      "weixinId": "zhouting_0618",
+      "region": "湖南 郴州"
+    }
+  ],
+  "moments": [
+    {
+      "id": 1,
+      "name": "张三",
+      "avatar": "avatar1.jpg",
+      "content": "在实验室调了一下午的 Bug，终于跑通了，感动到哭",
+      "images": [
+        "moment1.jpg",
+        "moment2.jpg"
+      ],
+      "time": "30分钟前",
+      "likes": [
+        "李思思",
+        "王五",
+        "陈晓"
+      ],
+      "comments": [
+        {
+          "user": "李思思",
+          "text": "恭喜恭喜！"
+        },
+        {
+          "user": "王五",
+          "text": "强啊，不愧是张工"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "李思思",
+      "avatar": "avatar2.jpg",
+      "content": "周末去了橘子洲头，天气好到不想回学校",
+      "images": [
+        "moment3.jpg",
+        "moment4.jpg",
+        "moment5.jpg"
+      ],
+      "time": "2小时前",
+      "likes": [
+        "赵学刚",
+        "刘敏"
+      ],
+      "comments": [
+        {
+          "user": "刘敏",
+          "text": "下次带我一个"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "王五",
+      "avatar": "avatar3.jpg",
+      "content": "分享一篇文章：Android 从入门到放弃（附避坑指南）",
+      "images": [],
+      "time": "5小时前",
+      "likes": [],
+      "comments": []
+    },
+    {
+      "id": 4,
+      "name": "刘敏",
+      "avatar": "avatar5.jpg",
+      "content": "食堂三楼的麻辣香锅真的绝了，强烈推荐",
+      "images": [
+        "moment6.jpg"
+      ],
+      "time": "昨天",
+      "likes": [
+        "张三",
+        "周婷",
+        "陈晓"
+      ],
+      "comments": [
+        {
+          "user": "周婷",
+          "text": "明天就去尝尝"
+        },
+        {
+          "user": "张三",
+          "text": "几点人少？"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "陈晓",
+      "avatar": "avatar4.jpg",
+      "content": "操作系统课设终于把 A1 写完了，后面还有 A4、A5……",
+      "images": [],
+      "time": "昨天",
+      "likes": [
+        "赵学刚",
+        "李思思"
+      ],
+      "comments": []
+    }
+  ]
+}

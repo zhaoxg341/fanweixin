@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>WeiXinDemo 界面预览</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px 20px 60px;
+    background: #eef0f3;
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    color: #191919;
+  }
+  h1 { font-size: 22px; margin: 0 0 6px; }
+  .sub { color: #6b7280; font-size: 13px; margin-bottom: 22px; line-height: 1.7; }
+  .sub code { background: #e3e6ea; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  .stage { display: flex; flex-wrap: wrap; gap: 26px; }
+
+  .phone {
+    width: 300px; height: 620px; background: #fff;
+    border-radius: 22px; overflow: hidden; position: relative;
+    display: flex; flex-direction: column;
+    box-shadow: 0 8px 26px rgba(0,0,0,.16); border: 1px solid #dfe2e6;
+  }
+  .caption { text-align: center; margin-top: 10px; font-size: 13px; color: #4b5563; font-weight: 600; }
+  .wrap { display: flex; flex-direction: column; }
+
+  /* ---------- 通用 ---------- */
+  .titlebar {
+    height: 46px; flex: none; background: #ededed; position: relative;
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .titlebar .t { font-size: 16px; font-weight: 700; max-width: 60%; overflow: hidden;
+    white-space: nowrap; text-overflow: ellipsis; }
+  .titlebar .l, .titlebar .r { position: absolute; top: 0; height: 46px; width: 38px;
+    display: flex; align-items: center; justify-content: center; color: #191919; }
+  .titlebar .l { left: 0; } .titlebar .r { right: 0; }
+  .titlebar .r.green { color: #07C160; }
+
+  .search { margin: 6px 8px; height: 32px; background: #ededed; border-radius: 5px;
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    color: #b2b2b2; font-size: 13px; }
+  .body { flex: 1; overflow: hidden; background: #fff; }
+
+  .avatar { width: 40px; height: 40px; border-radius: 5px; object-fit: cover; flex: none; background: #d7dbe0; }
+
+  .row { display: flex; align-items: center; padding: 9px 12px; gap: 11px; position: relative; }
+  .row + .row::before { content: ""; position: absolute; left: 62px; right: 0; top: 0;
+    height: 1px; background: #f0f0f0; }
+  .row .mid { flex: 1; min-width: 0; }
+  .row .n { font-size: 15px; font-weight: 500; }
+  .row .m { font-size: 12.5px; color: #888; margin-top: 3px; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap; }
+  .time { font-size: 11.5px; color: #b2b2b2; position: absolute; right: 12px; top: 9px; }
+  .badge { position: absolute; right: 12px; top: 32px; background: #fa5151; color: #fff;
+    font-size: 10.5px; min-width: 17px; height: 17px; border-radius: 9px;
+    display: flex; align-items: center; justify-content: center; padding: 0 5px; }
+
+  .tabbar { height: 52px; flex: none; display: flex; background: #fff;
+    border-top: 1px solid #e0e0e0; }
+  .tab { flex: 1; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 2px; color: #7f7f7f; font-size: 10px; position: relative; }
+  .tab.on { color: #07C160; }
+  .tab .tk { position: relative; }
+  .tab .tb { position: absolute; top: -4px; right: -12px; background: #fa5151; color: #fff;
+    font-size: 9.5px; min-width: 15px; height: 15px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center; padding: 0 4px; }
+
+  /* ---------- 通讯录 ---------- */
+  .letter { background: #ededed; color: #888; font-size: 12px; padding: 3px 12px; }
+  .idx { position: absolute; right: 2px; top: 130px; bottom: 70px; width: 20px;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    font-size: 9.5px; color: #666; font-weight: 600; }
+
+  /* ---------- 发现 / 我 ---------- */
+  .grp { background: #fff; }
+  .grp + .gap { height: 8px; background: #ededed; }
+  .gap { height: 8px; background: #ededed; }
+  .cell { display: flex; align-items: center; padding: 12px 14px; gap: 12px; position: relative; }
+  .cell + .cell::before { content: ""; position: absolute; left: 52px; right: 0; top: 0;
+    height: 1px; background: #f0f0f0; }
+  .cell .ci { width: 22px; height: 22px; flex: none; }
+  .cell .ct { flex: 1; font-size: 15.5px; }
+  .chev { color: #c8ccd2; font-size: 14px; }
+
+  .profile { display: flex; align-items: center; gap: 14px; padding: 20px 18px; background: #fff; }
+  .profile img { width: 58px; height: 58px; border-radius: 6px; object-fit: cover; }
+  .profile .pn { font-size: 19px; font-weight: 700; }
+  .profile .pw { font-size: 12.5px; color: #888; margin-top: 6px; }
+
+  /* ---------- 聊天 ---------- */
+  .chatbody { flex: 1; background: #ededed; padding: 8px 0; overflow: hidden; }
+  .tstamp { text-align: center; font-size: 11px; color: #b2b2b2; padding: 8px 0 6px; }
+  .msg { display: flex; padding: 5px 12px; gap: 8px; align-items: flex-start; }
+  .msg.right { flex-direction: row-reverse; }
+  .msg img { width: 34px; height: 34px; border-radius: 4px; object-fit: cover; flex: none; }
+  .bub { max-width: 200px; padding: 9px 11px; font-size: 14.5px; line-height: 1.45;
+    border-radius: 5px; position: relative; }
+  .msg.left .bub { background: #fff; }
+  .msg.right .bub { background: #95ec69; }
+  .inputbar { height: 48px; flex: none; background: #f5f5f5; border-top: 1px solid #e0e0e0;
+    display: flex; align-items: center; gap: 8px; padding: 0 9px; }
+  .inp { flex: 1; height: 34px; background: #fff; border-radius: 5px;
+    display: flex; align-items: center; padding: 0 10px; color: #191919; font-size: 14px; }
+  .sendbtn { background: #07C160; color: #fff; font-size: 13px; padding: 7px 12px; border-radius: 4px; }
+
+  /* ---------- 朋友圈 ---------- */
+  .cover { position: relative; height: 210px; }
+  .cover img.bg { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cover .me { position: absolute; right: 12px; bottom: 12px; display: flex;
+    align-items: center; gap: 8px; color: #fff; font-weight: 700; font-size: 15px;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+  .cover .me img { width: 44px; height: 44px; border-radius: 5px; object-fit: cover; }
+  .mbar { position: absolute; left: 0; right: 0; top: 0; height: 44px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 10px; color: #fff; }
+  .mbar .mt { position: absolute; left: 0; right: 0; text-align: center;
+    font-weight: 700; font-size: 16px; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+  .moment { display: flex; gap: 10px; padding: 12px; border-bottom: 1px solid #f0f0f0; }
+  .moment > img { width: 38px; height: 38px; border-radius: 4px; object-fit: cover; flex: none; }
+  .moment .mn { color: #576b95; font-weight: 600; font-size: 14.5px; }
+  .moment .mc { font-size: 14px; line-height: 1.5; margin-top: 4px; }
+  .mimgs { display: flex; gap: 4px; margin-top: 7px; }
+  .mimgs img { width: 72px; height: 72px; object-fit: cover; border-radius: 3px; }
+  .mlike { margin-top: 7px; background: #f7f7f7; border-radius: 3px; padding: 6px 8px;
+    font-size: 12.5px; line-height: 1.6; }
+  .mlike .lk { color: #576b95; }
+  .mlike .cm { color: #191919; }
+  .mlike .cm b { color: #576b95; font-weight: 400; }
+
+  /* ---------- 朋友圈：操作行 / 回复 ---------- */
+  .mact { display: flex; align-items: center; margin-top: 4px; color: #888; font-size: 11.5px; }
+  .mact .sp { flex: 1; }
+  .mact .a { display: flex; align-items: center; gap: 3px; padding: 4px 6px; }
+  .mact .a.on { color: #fa5151; }
+  .mine-tag { display: inline-block; background: #e6f7ec; color: #07C160; font-size: 9.5px;
+    padding: 1px 4px; border-radius: 3px; margin-left: 5px; vertical-align: 1px; }
+  .mlike .cm + .cm { margin-top: 3px; }
+
+  /* ---------- 发动态 ---------- */
+  .pubbar { height: 47px; flex: none; background: #ededed; display: flex; align-items: center;
+    justify-content: space-between; padding: 0 14px; border-bottom: 1px solid #e0e0e0; }
+  .pubbar .pj { background: #07C160; color: #fff; font-size: 13px; padding: 6px 13px; border-radius: 4px; }
+  .pubarea { padding: 16px; font-size: 15px; line-height: 1.6; color: #191919; }
+  .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 0 16px; }
+  .photo-grid img, .photo-add { width: 100%; aspect-ratio: 1; border-radius: 4px; object-fit: cover; }
+  .photo-add { border: 1px dashed #d5d5d5; background: #f7f7f7; display: flex;
+    align-items: center; justify-content: center; color: #b2b2b2; font-size: 30px; font-weight: 300; }
+
+  /* ---------- 底部功能面板 ---------- */
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #fff;
+    border-radius: 14px 14px 0 0; padding: 14px 14px 18px; }
+  .sheet .st { text-align: center; font-size: 11.5px; color: #b2b2b2; }
+  .frow { display: flex; margin-top: 12px; }
+  .fitem { flex: 1; text-align: center; font-size: 11.5px; color: #888; }
+  .fitem .ic { width: 40px; height: 40px; margin: 0 auto 6px; border-radius: 9px;
+    display: flex; align-items: center; justify-content: center; font-size: 21px; }
+  .gamebar { display: flex; align-items: center; gap: 10px; margin-top: 12px;
+    background: #f7f7f7; border-radius: 10px; padding: 11px; }
+  .gamebar .gt { flex: 1; }
+  .gamebar .gt b { font-size: 14.5px; }
+  .gamebar .gt div { font-size: 11.5px; color: #888; margin-top: 2px; }
+
+  /* ---------- 小游戏 ---------- */
+  .ghead { margin: 14px; padding: 16px; border-radius: 12px; color: #fff;
+    background: linear-gradient(90deg, #12c46c, #0ba35a); display: flex; align-items: center; gap: 12px; }
+  .ghead img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
+  .ghead .gn { font-size: 15px; font-weight: 700; }
+  .ghead .gs { font-size: 12.5px; opacity: .92; margin-top: 4px; }
+  .chips { display: flex; gap: 8px; padding: 0 14px; }
+  .chip { flex: 1; height: 33px; border-radius: 16px; border: 1px solid #ddd; background: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 12.5px; color: #191919; }
+  .chip.on { background: #07C160; border-color: #07C160; color: #fff; }
+  .gcard { margin: 12px 14px; background: #fff; border-radius: 12px; padding: 16px; }
+  .gesture-big { text-align: center; font-size: 52px; line-height: 1.1; }
+  .gesture-cap { text-align: center; font-size: 11.5px; color: #b2b2b2; margin-top: 2px; }
+  .gresult { text-align: center; font-size: 14.5px; font-weight: 700; margin-top: 10px; }
+  .gresult.win { color: #07C160; }
+  .gresult.lose { color: #fa5151; }
+  .grow { display: flex; gap: 8px; margin-top: 14px; }
+  .gb { flex: 1; background: #f7f7f7; border-radius: 10px; text-align: center; padding: 9px 0 7px; }
+  .gb .e { font-size: 27px; line-height: 1.2; }
+  .gb .l { font-size: 11.5px; color: #888; }
+  .ginput { display: flex; gap: 8px; margin-top: 12px; }
+  .ginput .box { flex: 1; height: 40px; background: #f7f7f7; border-radius: 5px;
+    display: flex; align-items: center; padding: 0 12px; color: #b2b2b2; font-size: 14px; }
+  .ginput .go { height: 40px; background: #07C160; color: #fff; border-radius: 6px;
+    padding: 0 16px; display: flex; align-items: center; font-size: 13.5px; }
+  .ghis { margin-top: 12px; font-size: 12.5px; color: #888; line-height: 1.9; }
+  .cardgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-top: 12px; }
+  .pcard { aspect-ratio: .92; border-radius: 8px; background: #e8f5ec; border: 1px solid #cdebd8;
+    display: flex; align-items: center; justify-content: center; font-size: 24px; color: #07C160; }
+  .pcard.open { background: #fff; border-color: #e0e0e0; color: #191919; }
+  .pcard.done { background: #d6f5e3; border-color: #8fd9ae; color: #191919; }
+  .globby { margin: 16px; padding: 18px; border-radius: 12px; color: #fff;
+    background: linear-gradient(90deg, #12c46c, #0ba35a); }
+  .globby .h { font-size: 21px; font-weight: 700; }
+  .globby .s { font-size: 12.5px; opacity: .92; margin-top: 6px; }
+  .lcard { margin: 10px 16px 0; background: #fff; border-radius: 12px; padding: 13px;
+    display: flex; align-items: center; gap: 12px; }
+  .lcard .li { width: 45px; height: 45px; border-radius: 50%; background: #e9f8ef;
+    display: flex; align-items: center; justify-content: center; font-size: 21px; flex: none; }
+  .lcard .lt { flex: 1; }
+  .lcard .lt b { font-size: 15.5px; }
+  .lcard .lt div { font-size: 11.5px; color: #888; margin-top: 3px; }
+</style>
+</head>
+<body>
+<h1>WeiXinDemo · 仿微信界面预览</h1>
+<p class="sub">
+  与「仿美团外卖」完全对齐的工程配置：<code>Gradle 8.2</code> + <code>AGP 8.1.4</code> +
+  <code>compileSdk 34</code> / <code>minSdk 21</code> / <code>targetSdk 34</code>，Java 17。<br>
+  下面的界面全部按工程里的真实布局还原，头像与配图直接引用
+  <code>res/drawable-nodpi</code> 下生成好的占位图，文案与 <code>assets/weixin.json</code> 一致。<br>
+  <b>新增能力</b>：改联系人备注、改我的昵称、改头像（16 宫格 + <b>从手机相册选照片</b>）、
+  20+ 组关键词自动回复（你好 / 吃饭了吗 / 晚安 / 在吗 / 谢谢 / 生日快乐…，同一句还会随机换说法）、
+  局域网在线聊天（电脑跑一个 Java 服务端，两台设备同一 WiFi 互发消息）。<br>
+  <b>本轮新增</b>：<b>发朋友圈动态</b>（文字 + 相册最多 9 图，落 SQLite）、
+  <b>点赞 / 评论 / 回复某人</b>（自己的动态和评论可长按删除）、
+  <b>和联系人玩小游戏</b>（猜拳 / 猜数字 / 翻牌配对，战绩一键发到聊天）。<br>
+  <b>这轮完善</b>：<b>全屏图片查看器</b>（左右滑动翻页、双指缩放、双击放大、单击隐藏顶栏）、
+  <b>聊天直接发图片</b>（相册选图 → 压缩落盘 → 气泡里显示缩略图，点开看大图）、
+  <b>聊天「⋯」菜单</b>（看联系人资料 / 清空聊天记录）、
+  <b>战绩长期保存</b>（猜拳胜负、猜数字最少次数、翻牌最少步数，游戏大厅可查看和清空）、
+  猜数字加<b>区间收窄提示</b>、翻牌加<b>计时</b>与<b>新纪录</b>提示。<br>
+  <b>最新一轮</b>：<b>图片真实化</b>（17 个好友头像换真人照片风、朋友圈配图换生活实拍风、封面换山川湖景）、
+  <b>微信红包</b>（橙色红包气泡 + 金色「開」拆红包动画，聊到「红包」对方也发一个）、
+  <b>语音消息</b>（按住说话，气泡里喇叭 + 秒数，点一下播放动画）、
+  <b>长按菜单</b>（复制 / 撤回 2 分钟内消息 / 删除，撤回显示灰色系统提示）。
+</p>
+
+<style>
+  /* 本轮新增的两个界面用到的小样式 */
+  .chat-img { width: 150px; height: 150px; object-fit: cover; border-radius: 5px; display: block; }
+  .viewer { position: relative; height: 100%; background: #000; }
+  .viewer .vbar { position: absolute; top: 0; left: 0; right: 0; height: 52px;
+    display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13.5px; }
+  .viewer .vback { position: absolute; left: 12px; top: 11px; width: 30px; height: 30px;
+    border-radius: 50%; background: rgba(255,255,255,.16); display: flex;
+    align-items: center; justify-content: center; font-size: 17px; }
+  .viewer .vhint { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center;
+    color: rgba(255,255,255,.7); font-size: 11px; }
+  .viewer img { width: 100%; height: 100%; object-fit: contain; }
+  .stats { margin: 12px 16px 0; background: #fff; border-radius: 12px; padding: 12px 14px 14px; }
+  .stats .sh { display: flex; align-items: center; font-size: 13.5px; font-weight: 700; }
+  .stats .sh span:first-child { flex: 1; }
+  .stats .sh .cl { color: #576b95; font-size: 11.5px; font-weight: 400; }
+  .stats .sn { display: flex; margin-top: 6px; }
+  .stats .sn > div { flex: 1; text-align: center; }
+  .stats .sn b { display: block; font-size: 16px; }
+  .stats .sn i { display: block; margin-top: 3px; font-size: 10.5px; color: #b2b2b2; font-style: normal; }
+</style>
+
+<div class="stage">
+
+  <!-- 1 微信 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar">
+        <div class="t">微信</div>
+        <div class="r"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+      </div>
+      <div class="search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        搜索
+      </div>
+      <div class="body">
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+          <div class="mid"><div class="n">张三</div><div class="m">明天记得把操作系统课设的实验报告交了</div></div>
+          <div class="time">12:30</div><div class="badge">2</div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_group.jpg">
+          <div class="mid"><div class="n">物联网一班通知群</div><div class="m">班长：本周五下午两点在学院楼 302 开班会</div></div>
+          <div class="time">11:05</div><div class="badge">5</div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar2.jpg">
+          <div class="mid"><div class="n">李思思</div><div class="m">好的，那下午三点图书馆见</div></div>
+          <div class="time">10:12</div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_team.jpg">
+          <div class="mid"><div class="n">微信团队</div><div class="m">你的微信已在新设备上登录</div></div>
+          <div class="time">昨天</div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar3.jpg">
+          <div class="mid"><div class="n">王五</div><div class="m">[图片]</div></div>
+          <div class="time">昨天</div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar4.jpg">
+          <div class="mid"><div class="n">陈晓</div><div class="m">你上次说的那个仿美团的项目做完了吗</div></div>
+          <div class="time">昨天</div><div class="badge">1</div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar5.jpg">
+          <div class="mid"><div class="n">刘敏</div><div class="m">食堂三楼新开了一家麻辣香锅</div></div>
+          <div class="time">星期一</div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_mp.jpg">
+          <div class="mid"><div class="n">订阅号消息</div><div class="m">今日热点：Android 15 开发者预览版发布</div></div>
+          <div class="time">星期一</div></div>
+      </div>
+      <div class="tabbar">
+        <div class="tab on"><span class="tk"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.4 4.6 3.6 6l-.9 2.9 3.2-1.6c1 .3 2 .4 3.1.4 5.1 0 9-3.4 9-7.7S17.1 3 12 3z"/></svg><span class="tb">8</span></span>微信</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.3-8 5.2V21h16v-1.8c0-2.9-3.6-5.2-8-5.2z"/></svg>通讯录</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9.2"/><path d="M15.8 8.2l-2.2 5.4-5.4 2.2 2.2-5.4z" fill="#fff"/></svg>发现</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5z"/></svg>我</div>
+      </div>
+    </div>
+    <div class="caption">① 微信（会话列表 + 未读红点）</div>
+  </div>
+
+  <!-- 2 通讯录 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="t">通讯录</div></div>
+      <div class="search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        搜索
+      </div>
+      <div class="body" style="position:relative">
+        <div class="row" style="padding:9px 12px"><span style="width:34px;height:34px;border-radius:5px;background:#fa9d3b;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px">👤</span><div class="mid"><div class="n">新的朋友</div></div><span class="chev">›</span></div>
+        <div class="row" style="padding:9px 12px"><span style="width:34px;height:34px;border-radius:5px;background:#07C160;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px">👥</span><div class="mid"><div class="n">群聊</div></div><span class="chev">›</span></div>
+        <div class="row" style="padding:9px 12px"><span style="width:34px;height:34px;border-radius:5px;background:#38adff;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px">🏷</span><div class="mid"><div class="n">标签</div></div><span class="chev">›</span></div>
+        <div class="row" style="padding:9px 12px"><span style="width:34px;height:34px;border-radius:5px;background:#3d7ef5;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px">📣</span><div class="mid"><div class="n">公众号</div></div><span class="chev">›</span></div>
+        <div class="letter">A</div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar6.jpg"><div class="mid"><div class="n">阿布</div></div></div>
+        <div class="letter">C</div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar4.jpg"><div class="mid"><div class="n">陈晓</div></div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar7.jpg"><div class="mid"><div class="n">程雨</div></div></div>
+        <div class="letter">D</div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar8.jpg"><div class="mid"><div class="n">邓超</div></div></div>
+        <div class="letter">H</div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar9.jpg"><div class="mid"><div class="n">何静</div></div></div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar10.jpg"><div class="mid"><div class="n">胡明</div></div></div>
+        <div class="letter">L</div>
+        <div class="row"><img class="avatar" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar2.jpg"><div class="mid"><div class="n">李思思</div></div></div>
+        <div class="idx"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span></div>
+      </div>
+      <div class="tabbar">
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.4 4.6 3.6 6l-.9 2.9 3.2-1.6c1 .3 2 .4 3.1.4 5.1 0 9-3.4 9-7.7S17.1 3 12 3z"/></svg>微信</div>
+        <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.3-8 5.2V21h16v-1.8c0-2.9-3.6-5.2-8-5.2z"/></svg>通讯录</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9.2"/><path d="M15.8 8.2l-2.2 5.4-5.4 2.2 2.2-5.4z" fill="#fff"/></svg>发现</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5z"/></svg>我</div>
+      </div>
+    </div>
+    <div class="caption">② 通讯录（字母分组 + 右侧索引栏）</div>
+  </div>
+
+  <!-- 3 发现 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="t">发现</div></div>
+      <div class="body" style="background:#ededed; padding-top:8px">
+        <div class="grp"><div class="cell"><span class="ci" style="background:#3d7ef5;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">📷</span><span class="ct">朋友圈</span><span class="chev">›</span></div></div>
+        <div class="gap"></div>
+        <div class="grp"><div class="cell"><span class="ci" style="background:#f5a623;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">▶</span><span class="ct">视频号</span><span class="chev">›</span></div></div>
+        <div class="gap"></div>
+        <div class="grp">
+          <div class="cell"><span class="ci" style="background:#38adff;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">▣</span><span class="ct">扫一扫</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ci" style="background:#3d7ef5;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">📳</span><span class="ct">摇一摇</span><span class="chev">›</span></div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp">
+          <div class="cell"><span class="ci" style="background:#3d7ef5;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">📖</span><span class="ct">看一看</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ci" style="background:#38adff;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">🔍</span><span class="ct">搜一搜</span><span class="chev">›</span></div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp">
+          <div class="cell"><span class="ci" style="background:#f5a623;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">📍</span><span class="ct">附近</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ci" style="background:#fa5151;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">🛒</span><span class="ct">购物</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ci" style="background:#07C160;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">🎮</span><span class="ct">游戏</span><span class="chev">›</span></div>
+        </div>
+      </div>
+      <div class="tabbar">
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.4 4.6 3.6 6l-.9 2.9 3.2-1.6c1 .3 2 .4 3.1.4 5.1 0 9-3.4 9-7.7S17.1 3 12 3z"/></svg>微信</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.3-8 5.2V21h16v-1.8c0-2.9-3.6-5.2-8-5.2z"/></svg>通讯录</div>
+        <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9.2"/><path d="M15.8 8.2l-2.2 5.4-5.4 2.2 2.2-5.4z" fill="#fff"/></svg>发现</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5z"/></svg>我</div>
+      </div>
+    </div>
+    <div class="caption">③ 发现（五个分组）</div>
+  </div>
+
+  <!-- 4 我 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="t">我</div></div>
+      <div class="body" style="background:#ededed">
+        <div class="profile">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg">
+          <div style="flex:1">
+            <div class="pn">赵学刚</div>
+            <div class="pw">微信号：zhaoxg_2026</div>
+            <div class="pw" style="font-size:11px;color:#07C160;margin-top:4px">已连接 10.90.127.161:8888</div>
+          </div>
+          <span style="color:#c8ccd2">▣ ›</span>
+        </div>
+        <div class="gap"></div>
+        <div class="grp"><div class="cell"><span class="ci" style="background:#07C160;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">💳</span><span class="ct">服务</span><span class="chev">›</span></div></div>
+        <div class="gap"></div>
+        <div class="grp">
+          <div class="cell"><span class="ci" style="background:#f5a623;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">★</span><span class="ct">收藏</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ci" style="background:#3d7ef5;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">🖼</span><span class="ct">朋友圈</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ci" style="background:#38adff;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">▤</span><span class="ct">卡包</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ci" style="background:#fa5151;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">☺</span><span class="ct">表情</span><span class="chev">›</span></div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp"><div class="cell"><span class="ci" style="background:#6b7280;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px">⚙</span><span class="ct">设置</span><span class="chev">›</span></div></div>
+      </div>
+      <div class="tabbar">
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.9 3 3 6.4 3 10.6c0 2.4 1.4 4.6 3.6 6l-.9 2.9 3.2-1.6c1 .3 2 .4 3.1.4 5.1 0 9-3.4 9-7.7S17.1 3 12 3z"/></svg>微信</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.3-8 5.2V21h16v-1.8c0-2.9-3.6-5.2-8-5.2z"/></svg>通讯录</div>
+        <div class="tab"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9.2"/><path d="M15.8 8.2l-2.2 5.4-5.4 2.2 2.2-5.4z" fill="#fff"/></svg>发现</div>
+        <div class="tab on"><svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5z"/></svg>我</div>
+      </div>
+    </div>
+    <div class="caption">④ 我（个人卡片 + 功能列表）</div>
+  </div>
+
+  <!-- 5 聊天页 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar">
+        <div class="l"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></div>
+        <div class="t">张三</div>
+        <div class="r"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="19" cy="12" r="1.9"/></svg></div>
+      </div>
+      <div class="chatbody">
+        <div class="tstamp">12:30</div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">明天记得把操作系统课设的实验报告交了</div></div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">好的，我今晚就交</div></div>
+        <div class="tstamp">14:22</div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">收到，稍等我看一下</div></div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">这周 A1 也一起交了吧</div></div>
+      </div>
+      <div class="inputbar">
+        <span style="color:#5b5b5b">🎙</span>
+        <div class="inp" style="color:#b2b2b2">输入消息</div>
+        <span style="color:#5b5b5b">☺</span>
+        <span style="color:#5b5b5b">⊕</span>
+      </div>
+    </div>
+    <div class="caption">⑤ 聊天页（左右气泡 + 自动回复）</div>
+  </div>
+
+  <!-- 6 朋友圈 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="body" style="background:#fff">
+        <div class="cover">
+          <img class="bg" src="WeiXinDemo/app/src/main/res/drawable-nodpi/moments_cover.jpg">
+          <div class="mbar">
+            <span style="font-size:17px">‹</span>
+            <span class="mt">朋友圈</span>
+            <span style="font-size:15px">📷</span>
+          </div>
+          <div class="me"><span>赵学刚</span><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"></div>
+        </div>
+        <div class="moment">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+          <div style="flex:1;min-width:0">
+            <div class="mn">张三</div>
+            <div class="mc">在实验室调了一下午的 Bug，终于跑通了，感动到哭</div>
+            <div class="mimgs">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment1.jpg">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment2.jpg">
+            </div>
+            <div class="mlike">
+              <div class="lk">李思思，王五，陈晓 觉得很赞</div>
+              <div class="cm" style="margin-top:3px">李思思：恭喜恭喜！<br>王五：强啊，不愧是张工</div>
+            </div>
+          </div>
+        </div>
+        <div class="moment">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar2.jpg">
+          <div style="flex:1;min-width:0">
+            <div class="mn">李思思</div>
+            <div class="mc">周末去了橘子洲头，天气好到不想回学校</div>
+            <div class="mimgs">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment3.jpg">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment4.jpg">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment5.jpg">
+            </div>
+            <div class="mlike">
+              <div class="lk">赵学刚，刘敏 觉得很赞</div>
+              <div class="cm" style="margin-top:3px">刘敏：下次带我一个</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑥ 朋友圈（封面 + 动态）</div>
+  </div>
+
+  <!-- 7 登录页 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="body" style="background:#fff;display:flex;flex-direction:column;align-items:center;padding-top:64px">
+        <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg" style="width:76px;height:76px;border-radius:10px;object-fit:cover">
+        <div style="font-size:19px;font-weight:700;margin-top:14px">登录微信</div>
+        <div style="font-size:12.5px;color:#999;margin-top:6px">填写昵称与服务器地址</div>
+        <div style="width:78%;margin-top:24px">
+          <div style="height:44px;background:#f7f7f7;border-radius:8px;display:flex;align-items:center;padding:0 14px;font-size:14.5px;margin-bottom:11px">昵称：赵学刚</div>
+          <div style="height:44px;background:#f7f7f7;border-radius:8px;display:flex;align-items:center;padding:0 14px;font-size:14.5px;margin-bottom:11px">服务器：10.90.127.161</div>
+          <div style="height:44px;background:#f7f7f7;border-radius:8px;display:flex;align-items:center;padding:0 14px;font-size:14.5px;margin-bottom:14px">端口：8888</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#333;margin-bottom:20px">
+            <span style="width:18px;height:18px;border-radius:4px;background:#07C160;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
+            连接聊天服务器（局域网在线聊天）
+          </div>
+          <div style="height:46px;background:#07C160;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;letter-spacing:2px">进 入 微 信</div>
+        </div>
+        <div style="font-size:11.5px;color:#b2b2b2;margin-top:16px;text-align:center;line-height:1.7;width:82%">
+          不勾选则进入「本地演示」模式<br>用 assets 数据 + 模拟自动回复
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑦ 登录页（填昵称 / 服务器，可选连服务器）</div>
+  </div>
+
+  <!-- 8 联系人资料 + 备注编辑 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">个人信息</div></div>
+      <div class="body" style="background:#ededed;position:relative">
+        <div class="grp">
+          <div class="cell" style="padding:16px 14px">
+            <img class="avatar" style="width:52px;height:52px" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+            <div class="ct" style="font-size:17px;font-weight:700">张三的室友<br><span style="font-size:12px;color:#999;font-weight:400">昵称：张三</span></div>
+          </div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp">
+          <div class="cell"><span class="ct">备注和标签</span><span style="color:#888;margin-right:2px">张三的室友</span><span class="chev">›</span></div>
+          <div class="cell"><span class="ct">朋友权限</span><span class="chev">›</span></div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp"><div class="cell"><span class="ct">发消息</span><span class="chev" style="color:#07C160;font-weight:700">›</span></div></div>
+
+        <!-- 编辑备注对话框（覆盖层） -->
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center">
+          <div style="width:80%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.3)">
+            <div style="padding:18px 16px 2px;font-size:16px;font-weight:700;text-align:center">设置备注</div>
+            <div style="padding:8px 16px 4px;font-size:12px;color:#999">备注名</div>
+            <div style="margin:0 16px;height:42px;background:#f7f7f7;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:14.5px">张三的室友</div>
+            <div style="font-size:11.5px;color:#bbb;padding:8px 16px 0">留空即恢复显示昵称</div>
+            <div style="display:flex;border-top:1px solid #eee;margin-top:14px">
+              <div style="flex:1;text-align:center;padding:13px;font-size:15.5px;color:#666">取消</div>
+              <div style="width:1px;background:#eee"></div>
+              <div style="flex:1;text-align:center;padding:13px;font-size:15.5px;color:#07C160;font-weight:600">保存</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑧ 联系人资料页（显示备注名 + 编辑备注对话框）</div>
+  </div>
+
+  <!-- 9 在线聊天 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar">
+        <div class="l">‹</div>
+        <div class="t">张三的室友</div>
+        <div class="r">⋯</div>
+      </div>
+      <div class="chatbody">
+        <div class="tstamp">15:08</div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">在吗？晚上一起吃饭</div></div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">在的，刚下课</div></div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">那就食堂三楼，老地方</div></div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">行，我五分钟就到 👍</div></div>
+      </div>
+      <div class="inputbar">
+        <span style="color:#5b5b5b">🎙</span>
+        <div class="inp">输入消息</div>
+        <span style="color:#5b5b5b">☺</span>
+        <span style="color:#5b5b5b">⊕</span>
+      </div>
+    </div>
+    <div class="caption">⑨ 在线聊天（两台设备同一 WiFi 实时互发，标题显示备注名）</div>
+  </div>
+
+  <!-- 10 选择头像 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">个人信息</div></div>
+      <div class="body" style="background:#ededed;position:relative">
+        <div class="grp">
+          <div class="cell" style="padding:16px 14px">
+            <img class="avatar" style="width:52px;height:52px" src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+            <div class="ct" style="font-size:17px;font-weight:700">张三<br><span style="font-size:12px;color:#999;font-weight:400">微信号：zhangsan_2026</span></div>
+          </div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp">
+          <div class="cell">
+            <span class="ct">头像</span>
+            <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg" style="width:36px;height:36px;border-radius:50%;object-fit:cover;margin-right:6px">
+            <span class="chev">›</span>
+          </div>
+          <div class="cell"><span class="ct">备注和标签</span><span style="color:#888;margin-right:2px">张三的室友</span><span class="chev">›</span></div>
+        </div>
+
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center">
+          <div style="width:91%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.3)">
+            <div style="padding:16px 16px 6px;font-size:16px;font-weight:700;text-align:center">选择头像</div>
+            <div style="font-size:11.5px;color:#999;padding:0 18px 10px">点一下就能换，改完立即生效</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:0 16px">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;box-sizing:border-box;border:2px solid #07C160">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar2.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar3.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar4.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar5.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar6.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar7.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar8.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar9.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar10.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar11.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar12.jpg" style="width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover">
+            </div>
+            <div style="text-align:center;font-size:11px;color:#bbb;padding-top:8px">共 16 张，下滑查看全部</div>
+            <div style="display:flex;border-top:1px solid #eee;margin-top:10px">
+              <div style="flex:1;text-align:center;padding:13px;font-size:15px;color:#666">取消</div>
+              <div style="width:1px;background:#eee"></div>
+              <div style="flex:1;text-align:center;padding:13px;font-size:15px;color:#07C160;font-weight:600">恢复默认</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑩ 选择好友头像（16 宫格 / 从相册选择 / 恢复默认）</div>
+  </div>
+
+  <!-- 11 关键词回复 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar">
+        <div class="l">‹</div>
+        <div class="t">张三的室友</div>
+        <div class="r">⋯</div>
+      </div>
+      <div class="chatbody">
+        <div class="tstamp">16:20</div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">你好</div></div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">你好</div></div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">吃饭了吗</div></div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">吃了</div></div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">你喜欢谁</div></div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">我是同性恋</div></div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">在吗</div></div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">在的，怎么啦</div></div>
+      </div>
+      <div class="inputbar">
+        <span style="color:#5b5b5b">🎙</span>
+        <div class="inp">输入消息</div>
+        <span style="color:#5b5b5b">☺</span>
+        <span style="color:#5b5b5b">⊕</span>
+      </div>
+    </div>
+    <div class="caption">⑪ 关键词自动回复（内置 20+ 组常用话术，同一句随机换说法）</div>
+  </div>
+
+  <!-- 12 我的资料菜单 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="t">我</div></div>
+      <div class="body" style="background:#ededed;position:relative">
+        <div class="profile">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg">
+          <div style="flex:1">
+            <div class="pn">赵学刚</div>
+            <div class="pw">微信号：zhaoxg_2026</div>
+            <div class="pw" style="font-size:11px;color:#07C160;margin-top:4px">已连接 10.90.127.161:8888</div>
+          </div>
+          <span style="color:#c8ccd2">▣ ›</span>
+        </div>
+        <div class="gap"></div>
+        <div class="grp"><div class="cell"><span class="ct">服务</span><span class="chev">›</span></div></div>
+
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:flex-end">
+          <div style="width:100%;background:#f7f7f7;border-radius:12px 12px 0 0;overflow:hidden">
+            <div style="text-align:center;padding:11px;font-size:12px;color:#999;background:#fff;border-bottom:1px solid #eee">个人资料</div>
+            <div style="background:#fff">
+              <div style="padding:15px;text-align:center;font-size:16px;border-bottom:1px solid #eee">修改昵称</div>
+              <div style="padding:15px;text-align:center;font-size:16px;border-bottom:1px solid #eee;color:#07C160">从相册更换头像</div>
+              <div style="padding:15px;text-align:center;font-size:16px;color:#e64340">恢复默认头像</div>
+            </div>
+            <div style="margin-top:8px;background:#fff;padding:15px;text-align:center;font-size:16px;color:#666">取消</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑫ 「我」页点头像卡片（改昵称 / 从相册换头像 / 恢复默认）</div>
+  </div>
+
+  <!-- 13 朋友圈互动 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="body" style="background:#fff">
+        <div class="cover" style="height:168px">
+          <img class="bg" src="WeiXinDemo/app/src/main/res/drawable-nodpi/moments_cover.jpg">
+          <div class="mbar">
+            <span style="font-size:17px">‹</span>
+            <span class="mt">朋友圈</span>
+            <span style="font-size:15px">📷</span>
+          </div>
+          <div class="me"><span>赵学刚</span><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"></div>
+        </div>
+
+        <div class="moment">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+          <div style="flex:1;min-width:0">
+            <div class="mn">张三</div>
+            <div class="mc">在实验室调了一下午的 Bug，终于跑通了</div>
+            <div class="mimgs">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment1.jpg">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment2.jpg">
+            </div>
+            <div class="mact">
+              <span>2小时前</span><span class="sp"></span>
+              <span class="a">💬 评论</span><span class="a on">♥ 取消</span>
+            </div>
+            <div class="mlike">
+              <div class="lk">李思思，赵学刚 觉得很赞</div>
+              <div class="cm" style="margin-top:3px"><b>我</b>：恭喜！<br><b>我 回复 李思思</b>：谢谢，下次一起</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="moment">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg">
+          <div style="flex:1;min-width:0">
+            <div class="mn">赵学刚<span class="mine-tag">我</span></div>
+            <div class="mc">骑车路过橘子洲头，风很舒服</div>
+            <div class="mimgs">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment3.jpg">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment4.jpg">
+              <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment5.jpg">
+            </div>
+            <div class="mact">
+              <span>刚刚</span><span class="sp"></span>
+              <span class="a">💬 评论</span><span class="a">♡ 赞</span>
+            </div>
+            <div class="mlike">
+              <div class="cm">张三：下次带我一个</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑬ 朋友圈互动（点赞 / 评论 / 回复某人；自己的动态带「我」标签，长按可删）</div>
+  </div>
+
+  <!-- 14 发动态 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="pubbar">
+        <span style="font-size:15px">取消</span>
+        <b style="font-size:16px">发表动态</b>
+        <span class="pj">发表</span>
+      </div>
+      <div class="body" style="background:#fff">
+        <div class="pubarea">今天天气不错，和室友去橘子洲头骑车，顺手拍了几张。</div>
+        <div class="photo-grid">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment1.jpg">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment2.jpg">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment3.jpg">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment4.jpg">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment5.jpg">
+          <div class="photo-add">＋</div>
+        </div>
+        <div style="padding:10px 16px;font-size:11.5px;color:#b2b2b2">5/9</div>
+        <div style="margin:18px 16px;background:#f7f7f7;border-radius:8px;padding:12px;font-size:11.5px;color:#888;line-height:1.7">
+          图片从系统相册选择，最多 9 张。<br>
+          选中后会按最长边 1080 压缩存进 App 私有目录，<br>
+          原图删了也不影响动态里的显示。
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑭ 发表动态（文字 + 相册多选图片 + 九宫格预览 + 单张删除）</div>
+  </div>
+
+  <!-- 15 聊天更多面板 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar">
+        <div class="l">‹</div><div class="t">张三</div><div class="r">⋯</div>
+      </div>
+      <div class="chatbody">
+        <div class="tstamp">16:40</div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">来玩一局？</div></div>
+        <div class="msg left"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg"><div class="bub">来啊，猜拳还是猜数字</div></div>
+        <div class="msg right"><img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg"><div class="bub">先猜拳，输的请奶茶</div></div>
+      </div>
+      <div class="inputbar">
+        <span style="color:#5b5b5b">🎙</span>
+        <div class="inp" style="color:#b2b2b2">输入消息</div>
+        <span style="color:#5b5b5b">☺</span>
+        <span style="color:#07C160;font-size:18px">⊕</span>
+      </div>
+      <div class="sheet">
+        <div class="st">更多功能</div>
+        <div class="frow">
+          <div class="fitem"><div class="ic" style="background:#4c9aff;color:#fff">🖼</div>添加图片</div>
+          <div class="fitem"><div class="ic" style="background:#f0f0f0">📷</div>拍摄</div>
+          <div class="fitem"><div class="ic" style="background:#5ac85a;color:#fff">▶</div>视频通话</div>
+          <div class="fitem"><div class="ic" style="background:#f5a623;color:#fff">📍</div>位置</div>
+        </div>
+        <div class="gamebar">
+          <div style="width:34px;height:34px;border-radius:8px;background:#e9f8ef;display:flex;align-items:center;justify-content:center;font-size:19px">🎮</div>
+          <div class="gt"><b>小游戏</b><div>和 TA 玩一局，顺便聊两句</div></div>
+          <span style="color:#c8ccd2">›</span>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑮ 聊天「+」面板（相册可发图，右上角「⋯」可看资料 / 清空记录）</div>
+  </div>
+
+  <!-- 16 猜拳 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">小游戏</div></div>
+      <div class="body" style="background:#ededed;overflow:hidden">
+        <div class="ghead">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+          <div><div class="gn">正在和 张三 玩</div><div class="gs">我 2 : 1 张三</div></div>
+        </div>
+        <div class="chips">
+          <div class="chip on">猜拳</div><div class="chip">猜数字</div><div class="chip">翻牌配对</div>
+        </div>
+        <div class="gcard">
+          <div class="gesture-big">✌️</div>
+          <div class="gesture-cap">对方出拳</div>
+          <div class="gresult win">你赢了，石头 胜 剪刀</div>
+          <div class="grow">
+            <div class="gb"><div class="e">✊</div><div class="l">石头</div></div>
+            <div class="gb"><div class="e">✌️</div><div class="l">剪刀</div></div>
+            <div class="gb"><div class="e">✋</div><div class="l">布</div></div>
+          </div>
+          <div style="text-align:center;margin-top:14px;font-size:12.5px;color:#576b95">重新开始</div>
+        </div>
+        <div style="margin:14px">
+          <div style="height:44px;background:#07C160;color:#fff;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:14.5px">把战绩发到聊天</div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑯ 猜拳（对手手势先抖动再定格，比分累计）</div>
+  </div>
+
+  <!-- 17 猜数字 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">小游戏</div></div>
+      <div class="body" style="background:#ededed;overflow:hidden">
+        <div class="ghead">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+          <div><div class="gn">正在和 张三 玩</div><div class="gs">我 1 : 1 张三</div></div>
+        </div>
+        <div class="chips">
+          <div class="chip">猜拳</div><div class="chip on">猜数字</div><div class="chip">翻牌配对</div>
+        </div>
+        <div class="gcard">
+          <div style="font-size:14.5px;font-weight:700">范围 38 ~ 49，还剩 4 次机会</div>
+          <div class="ginput">
+            <div class="box">输入数字</div>
+            <div class="go">猜数字</div>
+          </div>
+          <div class="ghis">
+            猜一个 1~100 的数字<br>
+            第 1 次：50 → 太大了，往小猜<br>
+            第 2 次：25 → 太小了，往大猜<br>
+            第 3 次：37 → 太小了，往大猜
+          </div>
+          <div style="text-align:right;margin-top:6px;font-size:12.5px;color:#576b95">重新开始</div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑰ 猜数字（七次机会，提示还能猜的区间）</div>
+  </div>
+
+  <!-- 18 翻牌 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">小游戏</div></div>
+      <div class="body" style="background:#ededed;overflow:hidden">
+        <div class="ghead">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+          <div><div class="gn">正在和 张三 玩</div><div class="gs">我 1 : 0 张三</div></div>
+        </div>
+        <div class="chips">
+          <div class="chip">猜拳</div><div class="chip">猜数字</div><div class="chip on">翻牌配对</div>
+        </div>
+        <div class="gcard">
+          <div style="font-size:14.5px;font-weight:700">翻开两张一样的牌就配对成功</div>
+          <div class="cardgrid">
+            <div class="pcard done">🍎</div>
+            <div class="pcard">?</div>
+            <div class="pcard open">🍇</div>
+            <div class="pcard">?</div>
+            <div class="pcard">?</div>
+            <div class="pcard done">🍎</div>
+            <div class="pcard">?</div>
+            <div class="pcard open">🍉</div>
+          </div>
+          <div style="display:flex;align-items:center;margin-top:10px;font-size:12.5px;color:#888">
+            <span style="flex:1">步数 3 · 用时 18 秒</span><span style="color:#576b95">重新开始</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑱ 翻牌配对（4×2 八张牌，计步数 + 计时，破纪录会提示）</div>
+  </div>
+
+  <!-- 19 游戏大厅 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">游戏</div></div>
+      <div class="body" style="background:#ededed;overflow:hidden">
+        <div class="globby">
+          <div class="h">游戏</div>
+          <div class="s">和好友玩一局，顺便聊两句</div>
+        </div>
+        <div class="stats">
+          <div class="sh"><span>我的战绩</span><span class="cl">清空</span></div>
+          <div class="sn">
+            <div><b>3 : 2</b><i>猜拳 胜 : 负</i></div>
+            <div><b>4 次</b><i>猜数字 最少</i></div>
+            <div><b>12 步</b><i>翻牌 最少步</i></div>
+          </div>
+        </div>
+        <div class="lcard">
+          <div class="li">✌️</div>
+          <div class="lt"><b>猜拳</b><div>石头剪刀布，五局三胜</div></div>
+          <span style="color:#c8ccd2">›</span>
+        </div>
+        <div class="lcard">
+          <div class="li">🔢</div>
+          <div class="lt"><b>猜数字</b><div>1~100，七次机会猜中</div></div>
+          <span style="color:#c8ccd2">›</span>
+        </div>
+        <div class="lcard">
+          <div class="li">🃏</div>
+          <div class="lt"><b>翻牌配对</b><div>翻开相同的两张牌</div></div>
+          <span style="color:#c8ccd2">›</span>
+        </div>
+        <div style="text-align:center;margin-top:22px;font-size:11.5px;color:#b2b2b2">选一个玩法，再挑好友开玩</div>
+      </div>
+    </div>
+    <div class="caption">⑲ 游戏大厅（三个玩法 + 长期保存的战绩，可一键清空）</div>
+  </div>
+
+  <!-- 20 聊天发图片 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">张三</div><div class="r">⋯</div></div>
+      <div class="chatbody">
+        <div class="tstamp">17:02</div>
+        <div class="msg right">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg">
+          <img class="chat-img" src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment3.jpg">
+        </div>
+        <div class="msg left">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar1.jpg">
+          <div class="bub">这张拍得可以啊，在哪儿？</div>
+        </div>
+        <div class="msg right">
+          <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/avatar_me.jpg">
+          <div class="bub">橘子洲头，傍晚风特别舒服</div>
+        </div>
+      </div>
+      <div class="inputbar">
+        <span style="color:#5b5b5b">🎙</span>
+        <div class="inp" style="color:#b2b2b2">输入消息</div>
+        <span style="color:#5b5b5b">☺</span>
+        <span style="color:#07C160;font-size:18px">⊕</span>
+      </div>
+      <div class="sheet">
+        <div class="st">更多功能</div>
+        <div class="frow">
+          <div class="fitem"><div class="ic" style="background:#4c9aff;color:#fff">🖼</div>添加图片</div>
+          <div class="fitem"><div class="ic" style="background:#f0f0f0">📷</div>拍摄</div>
+          <div class="fitem"><div class="ic" style="background:#5ac85a;color:#fff">▶</div>视频通话</div>
+          <div class="fitem"><div class="ic" style="background:#f5a623;color:#fff">📍</div>位置</div>
+        </div>
+        <div class="gamebar">
+          <div style="width:34px;height:34px;border-radius:8px;background:#e9f8ef;display:flex;align-items:center;justify-content:center;font-size:19px">🎮</div>
+          <div class="gt"><b>小游戏</b><div>和 TA 玩一局，顺便聊两句</div></div>
+          <span style="color:#c8ccd2">›</span>
+        </div>
+      </div>
+    </div>
+    <div class="caption">⑳ 聊天发图片（「+」→ 添加图片，气泡显示缩略图，点开看大图）</div>
+  </div>
+
+  <!-- 21 全屏看大图 -->
+  <div class="wrap">
+    <div class="phone" style="background:#000">
+      <div class="viewer">
+        <img src="WeiXinDemo/app/src/main/res/drawable-nodpi/moment3.jpg">
+        <div class="vbar">
+          <div class="vback">‹</div>
+          2 / 5
+        </div>
+        <div class="vhint">左右滑动切换 · 双击放大 · 单击隐藏</div>
+      </div>
+    </div>
+    <div class="caption">㉑ 全屏大图（朋友圈九宫格与聊天图片共用，双指缩放 3 倍）</div>
+  </div>
+
+  <!-- 22 红包 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="nav"><span class="back">‹</span><b style="font-size:15.5px">张三</b><span>⋯</span></div>
+      <div style="flex:1;background:#ededed;padding:10px 8px;display:flex;flex-direction:column;gap:9px">
+        <div style="text-align:center;font-size:10.5px;color:#a5a5a5">20:15</div>
+        <div style="display:flex;flex-direction:row-reverse;gap:7px;align-items:flex-start">
+          <div style="width:38px;height:38px;border-radius:4px;background:#6db66d"></div>
+          <div style="max-width:230px;background:linear-gradient(180deg,#ffae52,#f08a1d);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:9px;color:#fff">
+            <div style="width:26px;height:26px;border:1.6px solid #fff;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px">🧧</div>
+            <div style="flex:1"><b style="font-size:13px;display:block">恭喜发财，大吉大利</b><span style="font-size:10px;opacity:.75">微信红包</span></div>
+            <span style="font-size:11px">已领取</span>
+          </div>
+        </div>
+        <div style="font-size:10.5px;color:#a5a5a5;text-align:center;background:transparent">你撤回了一条消息</div>
+        <div style="display:flex;gap:7px;align-items:flex-start">
+          <div style="width:38px;height:38px;border-radius:4px;background:#d8b98c"></div>
+          <div style="max-width:230px;background:linear-gradient(180deg,#ffae52,#f08a1d);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:9px;color:#fff">
+            <div style="width:26px;height:26px;border:1.6px solid #fff;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px">🧧</div>
+            <div style="flex:1"><b style="font-size:13px;display:block">一点心意</b><span style="font-size:10px;opacity:.75">微信红包</span></div>
+            <span style="font-size:11px;opacity:.85">待领取</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:7px;align-items:flex-start">
+          <div style="width:38px;height:38px;border-radius:4px;background:#d8b98c"></div>
+          <div style="max-width:200px;background:#fff;border-radius:5px;padding:9px 11px;font-size:13.5px">谢谢老板，红包已领取！<br>祝大吉大利~</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;padding:7px 8px;background:#f7f7f7">
+        <span style="font-size:20px">🎙</span>
+        <div style="flex:1;height:32px;background:#e3e3e3;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:13.5px">按住 说话</div>
+        <span style="font-size:20px">⊕</span>
+      </div>
+    </div>
+    <div class="caption">㉒ 微信红包（橙色红包气泡 + 领取状态；下方灰色一行是撤回提示；底部是语音模式）</div>
+  </div>
+
+  <!-- 23 拆红包弹窗 -->
+  <div class="wrap">
+    <div class="phone" style="background:rgba(0,0,0,.55)">
+      <div style="height:100%;display:flex;align-items:center;justify-content:center;position:relative">
+        <div style="width:250px;background:linear-gradient(180deg,#ffae52,#f08a1d);border-radius:10px;padding:20px 18px 24px;text-align:center;color:#fff">
+          <div style="font-size:13px;opacity:.9">张三 的红包</div>
+          <div style="font-size:16.5px;font-weight:700;margin-top:5px">一点心意</div>
+          <div style="width:74px;height:74px;margin:20px auto 0;border-radius:50%;background:#ffd789;border:2px solid #fff3da;display:flex;align-items:center;justify-content:center;color:#7a4a00;font-size:26px;font-weight:700">開</div>
+          <div style="font-size:11px;opacity:.85;margin-top:12px">点击中央按钮领取</div>
+        </div>
+        <div style="position:absolute;bottom:14px;left:0;right:0;text-align:center;color:rgba(255,255,255,.6);font-size:22px">×</div>
+      </div>
+    </div>
+    <div class="caption">㉓ 拆红包（金色「開」，按下后金额浮现「¥8.88 已存入零钱」）</div>
+  </div>
+
+  <!-- 24 转账消息 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">张三</div><div class="r">⋯</div></div>
+      <div class="body" style="background:#ededed;padding:10px 12px">
+        <div style="display:flex;gap:8px;margin-bottom:10px">
+          <div class="avatar"></div>
+          <div style="background:#95EC69;border-radius:4px;padding:8px 10px;font-size:14px;max-width:70%">这周的饭钱给你</div>
+        </div>
+        <div style="display:flex;gap:8px;justify-content:flex-end">
+          <div style="width:200px;background:#FA9D3B;border-radius:4px;padding:9px 11px;color:#fff;display:flex;align-items:center;gap:9px">
+            <div style="width:28px;height:28px;border-radius:50%;background:#fff;color:#FA9D3B;display:flex;align-items:center;justify-content:center;font-weight:700">¥</div>
+            <div style="flex:1">
+              <div style="font-size:15px;font-weight:700">¥66.00</div>
+              <div style="font-size:10.5px;opacity:.75;margin-top:2px">这周的饭钱</div>
+            </div>
+            <div style="font-size:11px">待收款</div>
+          </div>
+          <div class="avatar"></div>
+        </div>
+        <div style="text-align:center;color:#b2b2b2;font-size:11px;margin-top:10px">对方已收款</div>
+      </div>
+      <div style="flex:none;height:48px;background:#f5f5f5;border-top:1px solid #e0e0e0;display:flex;align-items:center;gap:8px;padding:0 10px">
+        <div style="width:24px;height:24px;border-radius:50%;border:1.5px solid #888"></div>
+        <div style="flex:1;height:32px;background:#fff;border-radius:4px;border:1px solid #e0e0e0"></div>
+        <div style="width:24px;height:24px;border-radius:50%;border:1.5px solid #888"></div>
+        <div style="width:24px;height:24px;border-radius:50%;border:1.5px solid #888"></div>
+      </div>
+    </div>
+    <div class="caption">㉔ 转账（橙色卡片 + 说明，对方点卡片确认收款，我这边出「对方已收款」提示）</div>
+  </div>
+
+  <!-- 25 拍一拍 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">李四</div><div class="r">⋯</div></div>
+      <div class="body" style="background:#ededed;padding:10px 12px">
+        <div style="display:flex;gap:8px;margin-bottom:12px">
+          <div class="avatar"></div>
+          <div style="background:#fff;border-radius:4px;padding:8px 10px;font-size:14px">在吗在吗</div>
+        </div>
+        <div style="text-align:center;color:#b2b2b2;font-size:11.5px;margin:8px 0">你拍了拍"李四"</div>
+        <div style="text-align:center;color:#b2b2b2;font-size:11.5px;margin:8px 0">李四 拍了拍你</div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <div class="avatar"></div>
+          <div style="background:#fff;border-radius:4px;padding:8px 10px;font-size:14px">哈哈别拍我脑袋</div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">㉕ 拍一拍（双击头像触发，居中灰字；演示模式对方会拍回来）</div>
+  </div>
+
+  <!-- 26 表情面板 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">王五</div><div class="r">⋯</div></div>
+      <div class="body" style="background:#ededed"></div>
+      <div style="flex:none;background:#f5f5f5;border-top:1px solid #e0e0e0;padding:10px 8px 14px">
+        <div style="text-align:center;color:#b2b2b2;font-size:11px;margin-bottom:8px">选择表情</div>
+        <div style="display:grid;grid-template-columns:repeat(8,1fr);gap:6px;font-size:21px;text-align:center">
+          <span>😀</span><span>😁</span><span>😂</span><span>🤣</span><span>😃</span><span>😄</span><span>😅</span><span>😆</span>
+          <span>😉</span><span>😊</span><span>😋</span><span>😎</span><span>😍</span><span>😘</span><span>🥰</span><span>😗</span>
+          <span>🤔</span><span>🙄</span><span>😪</span><span>😴</span><span>😜</span><span>😝</span><span>🤑</span><span>😭</span>
+          <span>😱</span><span>🤪</span><span>😡</span><span>🤬</span><span>😷</span><span>🥳</span><span>🥺</span><span>🤡</span>
+          <span>👍</span><span>👏</span><span>🙏</span><span>💪</span><span>🤝</span><span>✌</span><span>❤</span><span>🧧</span>
+        </div>
+      </div>
+    </div>
+    <div class="caption">㉖ 表情面板（点笑脸弹出，96 个表情，点一个插入输入框）</div>
+  </div>
+
+  <!-- 27 收藏页 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">收藏</div></div>
+      <div class="body">
+        <div class="cell" style="align-items:flex-start">
+          <div style="width:40px;height:40px;background:#f0f0f0;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px">💬</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:14px">下周六同学聚会，老地方，别迟到！</div>
+            <div style="font-size:11px;color:#888;margin-top:4px">张三 · 2026-10-25 14:02</div>
+          </div>
+        </div>
+        <div class="cell" style="align-items:flex-start">
+          <div style="width:40px;height:40px;background:#f6d9a8;border-radius:4px"></div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:14px;color:#888">[图片]</div>
+            <div style="font-size:11px;color:#888;margin-top:4px">李四 · 2026-10-24 20:31</div>
+          </div>
+        </div>
+        <div class="cell" style="align-items:flex-start">
+          <div style="width:40px;height:40px;background:#FA9D3B;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">¥</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:14px;color:#888">[转账]</div>
+            <div style="font-size:11px;color:#888;margin-top:4px">我 · 2026-10-23 09:15</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="caption">㉗ 收藏页（长按消息「收藏」进来，倒序排列，长按删除）</div>
+  </div>
+
+  <!-- 28 设置页 -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="titlebar"><div class="l">‹</div><div class="t">设置</div></div>
+      <div class="body" style="background:#ededed">
+        <div style="font-size:12px;color:#888;padding:6px 14px">个人资料</div>
+        <div class="grp">
+          <div class="cell"><div style="width:56px">昵称</div><div style="flex:1;text-align:right;color:#888">小宇</div><div style="color:#c8c8c8">›</div></div>
+          <div class="cell"><div style="width:56px">微信号</div><div style="flex:1;text-align:right;color:#888">xiaoyu2026</div><div style="color:#c8c8c8">›</div></div>
+          <div class="cell"><div style="width:56px">性别</div><div style="flex:1;text-align:right;color:#888">男</div><div style="color:#c8c8c8">›</div></div>
+          <div class="cell"><div style="width:56px">地区</div><div style="flex:1;text-align:right;color:#888">湖南 长沙</div><div style="color:#c8c8c8">›</div></div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp">
+          <div class="cell"><div style="width:90px">服务器设置</div><div style="flex:1"></div><div style="color:#c8c8c8">›</div></div>
+        </div>
+        <div class="gap"></div>
+        <div class="grp"><div class="cell" style="justify-content:center">退出登录</div></div>
+      </div>
+    </div>
+    <div class="caption">㉘ 设置页（昵称 / 微信号 / 性别 / 地区都能改，存 SharedPreferences 全 App 生效）</div>
+  </div>
+
+</div>
+
+<p class="sub" style="margin-top:26px">
+  <b>在线聊天是怎么跑起来的</b>：电脑上运行一个极简 Java 服务端（<code>ChatServer</code>，纯 JDK，无第三方库），
+  它按昵称维护一张转发表；手机 App 里的 <code>ChatClient</code> 用 Socket 连上去，一条消息一行 JSON、
+  以换行分帧。A 发消息 → 服务端按「收件人昵称」找到 B 的连接 → 转发给 B，B 的界面立刻刷新。<br>
+  两台设备连同一个 WiFi，登录页填电脑的局域网 IP（服务端启动时会打印）即可；不填就直接走本地演示模式。<br><br>
+  <b>朋友圈的数据是怎么存的</b>：动态与评论都在 SQLite（<code>t_moment</code> / <code>t_moment_comment</code>），
+  第一次打开朋友圈时把 <code>assets/weixin.json</code> 里的示例动态导入一次，之后发的动态、点的赞、
+  写的评论都会保存，退出 App 再进来还在。配图从相册导入后会压缩到最长边 1080 存进
+  <code>files/moments/</code>，数据库里只记绝对路径。<br><br>
+  <b>小游戏</b>：三个玩法都是本地即时演算（对手随机出拳 / 随机答案 / 洗牌），不依赖服务器，
+  所以不联网也能玩；从聊天页「+」进入时会自动带上当前聊天对象，结束后可以把比分作为一条普通聊天消息发出去。
+  战绩写在 <code>SharedPreferences</code>（<code>game_stats</code>），猜拳记胜负，猜数字和翻牌只记最好成绩。<br><br>
+  <b>图片相关</b>：朋友圈配图和聊天图片都压缩到最长边 1080 后存进 <code>files/moments/</code>，
+  数据库里只记绝对路径。聊天消息表从 v3 升到 v4 时补了一列 <code>type</code>
+  （0 文字 / 1 图片），v5 又补了 <code>status</code>（撤回）和 <code>extra</code> 两列，
+  红包是 type=2（content 存 JSON：留言 / 金额 / 已领）、语音是 type=3（content 存秒数），
+  升级都用 <code>ALTER TABLE</code> 加列，老聊天记录不受影响。<br>
+  看大图统一走 <code>PhotoViewerActivity</code>：它内部是一个自写的 <code>ZoomImageView</code>，
+  用 <code>Matrix</code> + <code>ScaleGestureDetector</code> 实现缩放和拖动，没有引第三方图片库。<br><br>
+  <b>红包 / 语音 / 撤回</b>：发红包约 2 秒后对方会自动拆开并道谢，聊天里提到「红包」对方也会发一个；
+  语音是「按住说话」的模拟实现（只有时长没有真录音），点气泡有播放动画；
+  撤回只允许撤自己 2 分钟内发的消息，撤回后整行变灰色系统提示，会话列表按「最后一条未撤回的消息」重新显示。<br><br>
+  <b>转账 / 拍一拍 / 表情 / 收藏 / 设置</b>（v6）：转账是 type=4 的橙色卡片（content 存 JSON：金额 / 说明 / 收款状态），
+  对方点卡片确认收款后卡片变「已收款」，演示模式里我发的转账会被对方自动收下并道谢；
+  拍一拍是 type=5 的居中灰字系统消息，双击聊天页头像触发；
+  表情面板从底部弹出，96 个 Unicode 表情点击插入输入框；
+  长按消息可以「收藏」，存进新表 <code>t_favorite</code>（DB v6 新增），从「我-收藏」查看、长按删除；
+  「我-设置」打开独立设置页，昵称 / 微信号 / 性别 / 地区都能改（存 SharedPreferences），全 App 即时生效。
+  界面细节上：头像全部改成微信的圆角方形（约 4dp 圆角），聊天气泡圆角收窄到 4dp，
+  会话列表加了从头像右侧开始的分割线，搜索框换成浅灰圆角，朋友圈图标换成微信的蓝黄双色圈。
+</p>
+</body>
+</html>
